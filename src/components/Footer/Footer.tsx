@@ -1,8 +1,8 @@
 import { Flex } from '@patternfly/react-core/dist/dynamic/layouts/Flex';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { Modal, ModalVariant } from '@patternfly/react-core/dist/dynamic/components/Modal';
-import { PageSection } from '@patternfly/react-core/dist/dynamic/components/Page';
-import { Text, TextContent, TextList, TextListItem, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Icon } from '@patternfly/react-core';
+import { Modal, ModalVariant } from '@patternfly/react-core';
+import { PageSection } from '@patternfly/react-core';
+import { Text, TextContent, TextList, TextListItem, TextVariants } from '@patternfly/react-core';
 import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 
 import RedHatIcon from '@patternfly/react-icons/dist/dynamic/icons/redhat-icon';
@@ -29,20 +29,20 @@ const Footer = ({ setCookieElement, cookieElement }: FooterProps) => {
 
   return (
     <React.Fragment>
-      <PageSection className="chr-c-footer pf-v5-u-mt-auto pf-v5-u-p-lg pf-v5-m-no-fill pf-v5-u-mt-auto pf-v5-u-background-color-dark-100 pf-v5-u-flex-grow-0">
-        <Flex role="contentinfo" className="pf-m-column pf-v5-u-flex-direction-row-on-lg">
-          <a href="https://www.redhat.com" target="_blank" rel="noopener noreferrer" className="pf-v5-l-flex">
-            <Icon className="pf-v5-u-mx-md pf-v5-u-mt-xs pf-v5-u-mb-md">
+      <PageSection className="chr-c-footer pf-v6-u-mt-auto pf-v6-u-p-lg pf-v5-m-no-fill pf-v6-u-mt-auto pf-v6-u-background-color-dark-100 pf-v6-u-flex-grow-0">
+        <Flex role="contentinfo" className="pf-m-column pf-v6-u-flex-direction-row-on-lg">
+          <a href="https://www.redhat.com" target="_blank" rel="noopener noreferrer" className="pf-v6-l-flex">
+            <Icon className="pf-v6-u-mx-md pf-v6-u-mt-xs pf-v6-u-mb-md">
               <RedHatIcon />
             </Icon>
           </a>
-          <Flex className="pf-m-column pf-v5-u-align-self-flex-start">
-            <TextContent className="pf-v5-l-flex pf-v5-u-mb-sm">
-              <Text component="p" className="pf-v5-u-color-400 pf-v5-u-font-size-xs">
+          <Flex className="pf-m-column pf-v6-u-align-self-flex-start">
+            <TextContent className="pf-v6-l-flex pf-v6-u-mb-sm">
+              <Text component="p" className="pf-v6-u-color-400 pf-v6-u-font-size-xs">
                 ©2023 Red Hat, Inc.
               </Text>
             </TextContent>
-            <TextContent className="pf-v5-l-flex pf-m-column pf-v5-u-flex-direction-row-on-md pf-v5-u-font-size-xs">
+            <TextContent className="pf-v6-l-flex pf-m-column pf-v6-u-flex-direction-row-on-md pf-v6-u-font-size-xs">
               <Text component="a" onClick={() => setIsModalOpen(true)}>
                 Browser Support
               </Text>

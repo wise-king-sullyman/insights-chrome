@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Bullseye } from '@patternfly/react-core/dist/dynamic/layouts/Bullseye';
-import { Menu, MenuContent, MenuGroup, MenuItem, MenuList } from '@patternfly/react-core/dist/dynamic/components/Menu';
-import { SearchInput as PFSearchInput, SearchInputProps } from '@patternfly/react-core/dist/dynamic/components/SearchInput';
-import { Spinner } from '@patternfly/react-core/dist/dynamic/components/Spinner';
+import { Menu, MenuContent, MenuGroup, MenuItem, MenuList } from '@patternfly/react-core';
+import { SearchInput as PFSearchInput, SearchInputProps } from '@patternfly/react-core';
+import { Spinner } from '@patternfly/react-core';
 import { Popper } from '@patternfly/react-core/dist/dynamic/helpers/Popper/Popper';
 
 import debounce from 'lodash/debounce';
@@ -281,11 +281,11 @@ const SearchInput = ({ onStateChange }: SearchInputListener) => {
     />
   );
   const menu = (
-    <Menu ref={menuRef} className="pf-v5-u-pt-sm pf-v5-u-px-md chr-c-search__menu">
+    <Menu ref={menuRef} className="pf-v6-u-pt-sm pf-v6-u-px-md chr-c-search__menu">
       <MenuContent>
         <MenuList>
           {isFetching ? (
-            <Bullseye className="pf-v5-u-p-md">
+            <Bullseye className="pf-v6-u-p-md">
               <Spinner size="xl" />
             </Bullseye>
           ) : (
@@ -305,7 +305,7 @@ const SearchInput = ({ onStateChange }: SearchInputListener) => {
                       }
                     }}
                     key={index}
-                    className="pf-v5-u-mb-xs"
+                    className="pf-v6-u-mb-xs"
                     component={(props) => <ChromeLink {...props} href={item.pathname} />}
                   >
                     <SearchTitle title={item.title} bundleTitle={item.bundleTitle.replace(/(\[|\])/gm, '')} />
@@ -322,7 +322,7 @@ const SearchInput = ({ onStateChange }: SearchInputListener) => {
   );
 
   return (
-    <div ref={containerRef} className="chr-c-search__input pf-v5-c-search-input pf-v5-u-w-100">
+    <div ref={containerRef} className="chr-c-search__input pf-v6-c-search-input pf-v6-u-w-100">
       {!md && <Popper trigger={toggle} popper={menu} appendTo={containerRef.current || undefined} isVisible={isOpen} />}
       {md && <Popper trigger={toggle} popper={menu} appendTo={containerRef.current || undefined} isVisible={isOpen} />}
     </div>

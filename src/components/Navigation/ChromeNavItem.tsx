@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from 'react';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { NavItem } from '@patternfly/react-core/dist/dynamic/components/Nav';
-import { Tooltip } from '@patternfly/react-core/dist/dynamic/components/Tooltip';
+import { Icon } from '@patternfly/react-core';
+import { NavItem } from '@patternfly/react-core';
+import { Tooltip } from '@patternfly/react-core';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 import FlaskIcon from '@patternfly/react-icons/dist/dynamic/icons/flask-icon';
 import BellIcon from '@patternfly/react-icons/dist/dynamic/icons/bell-icon';
@@ -71,12 +71,12 @@ const ChromeNavItem = ({
       )}
       {isFavorited && (
         <Icon>
-          <StarIcon color="var(--pf-v5-global--palette--gold-400)" />
+          <StarIcon color="var(--pf-v6-global--palette--gold-400)" />
         </Icon>
       )}
       {hasNotifier && (
         <Icon size="md">
-          <BellIcon className="notifier-icon" color="var(--pf-v5-global--default-color--200)" />
+          <BellIcon className="notifier-icon" color="var(--pf-v6-global--default-color--200)" />
         </Icon>
       )}
     </NavItem>

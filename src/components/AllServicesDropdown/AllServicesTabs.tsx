@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { Tab, TabProps, TabTitleText, Tabs, TabsProps } from '@patternfly/react-core/dist/dynamic/components/Tabs';
+import { Icon } from '@patternfly/react-core';
+import { Tab, TabProps, TabTitleText, Tabs, TabsProps } from '@patternfly/react-core';
 
 import StarIcon from '@patternfly/react-icons/dist/dynamic/icons/star-icon';
 
@@ -74,7 +74,7 @@ const AllServicesTabs = ({
       onToggle={onToggle}
       toggleText={activeTabTitle}
       role="region"
-      className="pf-v5-u-p-md pf-v5-u-pr-0"
+      className="pf-v6-u-p-md pf-v6-u-pr-0"
       ouiaId={'all-services-tabs'}
     >
       <TabWrapper
@@ -86,7 +86,7 @@ const AllServicesTabs = ({
         title={
           <TabTitleText>
             Favorites
-            <Icon className="chr-c-icon-service-tab pf-v5-u-ml-sm" status="warning" isInline>
+            <Icon className="chr-c-icon-service-tab pf-v6-u-ml-sm" status="warning" isInline>
               <StarIcon />
             </Icon>
           </TabTitleText>

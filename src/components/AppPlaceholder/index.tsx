@@ -1,5 +1,5 @@
-import { Masthead, MastheadBrand, MastheadMain } from '@patternfly/react-core/dist/dynamic/components/Masthead';
-import { Page, PageSidebar, PageSidebarBody } from '@patternfly/react-core/dist/dynamic/components/Page';
+import { Masthead, MastheadBrand, MastheadMain } from '@patternfly/react-core';
+import { Page, PageSidebar, PageSidebarBody } from '@patternfly/react-core';
 
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
@@ -18,7 +18,7 @@ const AppPlaceholder = (props: FooterProps) => {
         className="chr-c-page"
         header={
           <Masthead className="chr-c-masthead">
-            <MastheadMain className="pf-v5-u-pl-lg">
+            <MastheadMain className="pf-v6-u-pl-lg">
               <MastheadBrand component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
                 <Logo />
               </MastheadBrand>

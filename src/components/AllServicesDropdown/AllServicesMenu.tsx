@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
-import { Backdrop } from '@patternfly/react-core/dist/dynamic/components/Backdrop';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Card, CardBody, CardHeader } from '@patternfly/react-core/dist/dynamic/components/Card';
+import { Backdrop } from '@patternfly/react-core';
+import { Button } from '@patternfly/react-core';
+import { Card, CardBody, CardHeader } from '@patternfly/react-core';
 import { Stack, StackItem } from '@patternfly/react-core/dist/dynamic/layouts/Stack';
-import { Panel, PanelMain } from '@patternfly/react-core/dist/dynamic/components/Panel';
-import { Sidebar, SidebarContent, SidebarPanel } from '@patternfly/react-core/dist/dynamic/components/Sidebar';
-import { TabContent } from '@patternfly/react-core/dist/dynamic/components/Tabs';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
-import { Title } from '@patternfly/react-core/dist/dynamic/components/Title';
+import { Panel, PanelMain } from '@patternfly/react-core';
+import { Sidebar, SidebarContent, SidebarPanel } from '@patternfly/react-core';
+import { TabContent } from '@patternfly/react-core';
+import { Text, TextContent, TextVariants } from '@patternfly/react-core';
+import { Title } from '@patternfly/react-core';
 
 import ChromeLink from '../ChromeLink';
 import TimesIcon from '@patternfly/react-icons/dist/dynamic/icons/times-icon';
@@ -71,18 +71,18 @@ const AllServicesMenu = ({ setIsOpen, isOpen, menuRef, linkSections, favoritedSe
     >
       <div
         ref={menuRef}
-        className="pf-v5-u-w-100 chr-c-page__services-nav-dropdown-menu"
+        className="pf-v6-u-w-100 chr-c-page__services-nav-dropdown-menu"
         data-testid="chr-c__find-app-service"
         onClick={handleClickOutside}
       >
         <Backdrop>
-          <Panel variant="raised" className="pf-v5-u-p-0 chr-c-panel-services-nav" ref={panelRef}>
+          <Panel variant="raised" className="pf-v6-u-p-0 chr-c-panel-services-nav" ref={panelRef}>
             <PanelMain>
               <Sidebar>
                 <SidebarPanel>
                   <Stack>
-                    <StackItem className="chr-l-stack__item-browse-all-services pf-v5-u-w-100 pf-v5-u-p-md">
-                      <TextContent className="pf-v5-u-text-align-center-on-md pf-v5-u-pl-sm pf-v5-u-pl-0-on-md">
+                    <StackItem className="chr-l-stack__item-browse-all-services pf-v6-u-w-100 pf-v6-u-p-md">
+                      <TextContent className="pf-v6-u-text-align-center-on-md pf-v6-u-pl-sm pf-v6-u-pl-0-on-md">
                         <Text component={TextVariants.p}>
                           <ChromeLink href="/allservices">
                             <Button isBlock>All services</Button>
@@ -90,7 +90,7 @@ const AllServicesMenu = ({ setIsOpen, isOpen, menuRef, linkSections, favoritedSe
                         </Text>
                       </TextContent>
                     </StackItem>
-                    <StackItem className="pf-v5-u-w-100">
+                    <StackItem className="pf-v6-u-w-100">
                       <AllServicesTabs
                         activeTabKey={activeTabKey}
                         handleTabClick={handleTabClick}
@@ -114,7 +114,7 @@ const AllServicesMenu = ({ setIsOpen, isOpen, menuRef, linkSections, favoritedSe
                           </Button>,
                         ],
                       }}
-                      className="pf-v5-u-pr-xs pf-v5-u-pr-md-on-md"
+                      className="pf-v6-u-pr-xs pf-v6-u-pr-md-on-md"
                     >
                       <Title headingLevel="h2">{activeTabKey === FAVORITE_TAB_ID ? 'Favorites' : selectedService.title}</Title>
                     </CardHeader>

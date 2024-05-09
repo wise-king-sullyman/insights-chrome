@@ -20,7 +20,7 @@ const language: keyof typeof messages = 'en';
 const AuthProvider = OIDCProvider;
 
 GenerateId.defaultProps.prefix = 'hc-console-';
-GenerateId.defaultProps.isRandom = true;
+// GenerateId.defaultProps.isRandom = true;
 
 const useInitializeAnalytics = () => {
   useEffect(() => {

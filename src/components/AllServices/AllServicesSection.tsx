@@ -1,6 +1,6 @@
-import { Card, CardBody, CardTitle } from '@patternfly/react-core/dist/dynamic/components/Card';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Card, CardBody, CardTitle } from '@patternfly/react-core';
+import { Icon } from '@patternfly/react-core';
+import { Text, TextContent, TextVariants } from '@patternfly/react-core';
 import React from 'react';
 import { ITLess, titleToId } from '../../utils/common';
 import AllServicesGroup from './AllServicesGroup';
@@ -14,16 +14,16 @@ const AllServicesSection = ({ icon, title, description, links }: AllServicesSect
   const TitleIcon = icon ? <ServiceIcon icon={icon} /> : null;
   const filteredLinks = ITLess() ? links.filter((link) => link.ITLess) : links;
   return (
-    <Card className="pf-v5-u-display-block pf-v5-u-mb-md pf-v5-u-background-color-100">
+    <Card className="pf-v6-u-display-block pf-v6-u-mb-md pf-v6-u-background-color-100">
       <CardTitle>
-        <Icon className="pf-v5-u-mr-xs" isInline>
+        <Icon className="pf-v6-u-mr-xs" isInline>
           {TitleIcon}
         </Icon>
         {title}
       </CardTitle>
       <CardBody>
-        <TextContent className="pf-v5-u-font-size-sm">
-          <Text component={TextVariants.p} className="pf-v5-u-mb-md">
+        <TextContent className="pf-v6-u-font-size-sm">
+          <Text component={TextVariants.p} className="pf-v6-u-mb-md">
             {description || null}
           </Text>
           {filteredLinks.map((link, index) =>

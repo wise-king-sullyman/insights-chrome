@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavExpandable } from '@patternfly/react-core/dist/dynamic/components/Nav';
+import { NavExpandable } from '@patternfly/react-core';
 import ChromeNavItemFactory from './ChromeNavItemFactory';
 import { ChromeNavExpandableProps } from '../../@types/types';
 

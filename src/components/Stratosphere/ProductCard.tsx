@@ -1,5 +1,5 @@
 import React, { Fragment, VoidFunctionComponent } from 'react';
-import { Text, TextContent } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Text, TextContent } from '@patternfly/react-core';
 import ArrowRightIcon from '@patternfly/react-icons/dist/dynamic/icons/arrow-right-icon';
 import ChromeLink from '../ChromeLink/ChromeLink';
 
@@ -30,7 +30,7 @@ const ProductCard: VoidFunctionComponent<ProductCardProps> = ({ img, description
       <div className={`chr-c-product-card__footer footer-${order}`}>
         <ChromeLink className="chr-c-product-card__link" href={link.href} appId={link.appId}>
           {link.label}&nbsp;
-          <ArrowRightIcon className="pf-v5-u-ml-sm" />
+          <ArrowRightIcon className="pf-v6-u-ml-sm" />
         </ChromeLink>
       </div>
     </Fragment>

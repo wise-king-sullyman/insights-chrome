@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { Menu, MenuItem, MenuList } from '@patternfly/react-core/dist/dynamic/components/Menu';
-import { MenuToggle } from '@patternfly/react-core/dist/dynamic/components/MenuToggle';
+import { Icon } from '@patternfly/react-core';
+import { Menu, MenuItem, MenuList } from '@patternfly/react-core';
+import { MenuToggle } from '@patternfly/react-core';
 import { Popper } from '@patternfly/react-core/dist/dynamic/helpers/Popper/Popper';
 
 import StarIcon from '@patternfly/react-icons/dist/dynamic/icons/star-icon';
@@ -64,7 +64,7 @@ const BreadcrumbsFavorites = ({
       variant="plain"
       onClick={onToggleClick}
       isExpanded={isOpen}
-      className="pf-v5-u-pt-xs pf-v5-u-text-nowrap"
+      className="pf-v6-u-pt-xs pf-v6-u-text-nowrap"
     >
       <Icon
         className={classNames('chr-c-breadcrumbs__favorite', {
@@ -74,7 +74,7 @@ const BreadcrumbsFavorites = ({
       >
         <StarIcon />
       </Icon>
-      <CaretDownIcon className="pf-v5-u-ml-sm" />
+      <CaretDownIcon className="pf-v6-u-ml-sm" />
     </MenuToggle>
   );
 

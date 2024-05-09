@@ -1,9 +1,9 @@
 .chr-c-footer {
-  background-color: var(--pf-v5-global--BackgroundColor--dark-100);
-  padding: var(--pf-v5-global--spacer--md);
-  padding-left: var(--pf-v5-global--spacer--xl);
+  background-color: var(--pf-v6-global--BackgroundColor--dark-100);
+  padding: var(--pf-v6-global--spacer--md);
+  padding-left: var(--pf-v6-global--spacer--xl);
   &__logo {
-    height: var(--pf-v5-global--FontSize--4xl);
+    height: var(--pf-v6-global--FontSize--4xl);
   }
 
   &__link {
@@ -11,6 +11,6 @@
   }
 
   &__divider::after {
-    background-color: var(--pf-v5-global--Color--200);
+    background-color: var(--pf-v6-global--Color--200);
   }
 }

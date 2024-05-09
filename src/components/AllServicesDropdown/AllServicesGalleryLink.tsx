@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Card, CardBody } from '@patternfly/react-core/dist/dynamic/components/Card';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
+import { Button } from '@patternfly/react-core';
+import { Card, CardBody } from '@patternfly/react-core';
+import { Icon } from '@patternfly/react-core';
 import { Split, SplitItem } from '@patternfly/react-core/dist/dynamic/layouts/Split';
-import { Text, TextContent } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Text, TextContent } from '@patternfly/react-core';
 
 import StarIcon from '@patternfly/react-icons/dist/dynamic/icons/star-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
@@ -44,25 +44,25 @@ const AllServicesGalleryLink = ({ href, title, icon, description, isExternal, ca
           'chr-c-icon-favorited': isFavorite,
         })}
         isFullHeight
-        isFlat
-        isSelectableRaised
+        
+        
         onClick={onLinkClick}
       >
-        <CardBody className="pf-v5-u-p-md">
+        <CardBody className="pf-v6-u-p-md">
           <Split>
-            <SplitItem className="pf-v5-u-mr-sm">{TitleIcon}</SplitItem>
+            <SplitItem className="pf-v6-u-mr-sm">{TitleIcon}</SplitItem>
             <SplitItem className="pf-v5-m-fill">
-              <div className="pf-v5-u-mb-sm">{title}</div>
+              <div className="pf-v6-u-mb-sm">{title}</div>
             </SplitItem>
             <SplitItem>
               {isExternal ? (
-                <Icon className="pf-v5-u-ml-sm chr-c-icon-external-link" isInline>
+                <Icon className="pf-v6-u-ml-sm chr-c-icon-external-link" isInline>
                   <ExternalLinkAltIcon />
                 </Icon>
               ) : (
                 <Button
                   variant="plain"
-                  className="pf-v5-u-p-0"
+                  className="pf-v6-u-p-0"
                   ouiaId={`${category}-${group ? `${group}-` : ''}${titleToId(title)}-FavoriteToggle`}
                   onClick={(e) => {
                     e.stopPropagation();
@@ -71,7 +71,7 @@ const AllServicesGalleryLink = ({ href, title, icon, description, isExternal, ca
                   }}
                   icon={
                     <Icon
-                      className={classNames('pf-v5-u-ml-sm chr-c-icon-star', {
+                      className={classNames('pf-v6-u-ml-sm chr-c-icon-star', {
                         favorite: isFavorite,
                       })}
                     >
@@ -83,7 +83,7 @@ const AllServicesGalleryLink = ({ href, title, icon, description, isExternal, ca
             </SplitItem>
           </Split>
           <TextContent>
-            <Text className="pf-v5-u-font-size-xs pf-v5-u-color-100">{description ?? ''}</Text>
+            <Text className="pf-v6-u-font-size-xs pf-v6-u-color-100">{description ?? ''}</Text>
           </TextContent>
         </CardBody>
       </Card>

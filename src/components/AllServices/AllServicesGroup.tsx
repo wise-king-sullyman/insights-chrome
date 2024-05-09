@@ -1,4 +1,4 @@
-import { Text, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Text, TextVariants } from '@patternfly/react-core';
 import React, { Fragment } from 'react';
 import { ITLess, titleToId } from '../../utils/common';
 
@@ -15,7 +15,7 @@ const AllServicesGroup = ({ title, links, category }: AllServicesGroupProps) => 
   }
   return (
     <Fragment>
-      <Text component={TextVariants.p} className="pf-v5-u-pt-xs pf-v5-u-font-weight-bold">
+      <Text component={TextVariants.p} className="pf-v6-u-pt-xs pf-v6-u-font-weight-bold">
         {title}
       </Text>
       {filteredLinks.map((link, index) => (

@@ -1,11 +1,11 @@
 import React, { memo, useContext, useState } from 'react';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Card, CardBody, CardTitle } from '@patternfly/react-core/dist/dynamic/components/Card';
+import { Button } from '@patternfly/react-core';
+import { Card, CardBody, CardTitle } from '@patternfly/react-core';
 import { FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex';
 import { Grid, GridItem } from '@patternfly/react-core/dist/dynamic/layouts/Grid';
-import { Label } from '@patternfly/react-core/dist/dynamic/components/Label';
-import { Modal, ModalVariant } from '@patternfly/react-core/dist/dynamic/components/Modal';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Label } from '@patternfly/react-core';
+import { Modal, ModalVariant } from '@patternfly/react-core';
+import { Text, TextContent, TextVariants } from '@patternfly/react-core';
 
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 import OutlinedCommentsIcon from '@patternfly/react-icons/dist/dynamic/icons/outlined-comments-icon';
@@ -62,29 +62,29 @@ const FeedbackModal = memo(() => {
       case 'feedbackHome':
         return (
           <div className="chr-c-feedback-content">
-            <FlexItem className="pf-v5-u-flex-grow-1">
-              <TextContent className="pf-v5-u-mb-md">
+            <FlexItem className="pf-v6-u-flex-grow-1">
+              <TextContent className="pf-v6-u-mb-md">
                 <Text component={TextVariants.h1}>{intl.formatMessage(messages.tellAboutExperience)}</Text>
                 <Text>{intl.formatMessage(messages.helpUsImproveHCC)}</Text>
               </TextContent>
-              <Card className="pf-v5-u-mb-lg" isSelectableRaised isCompact onClick={() => setModalPage('feedbackOne')}>
-                <CardTitle className="pf-v5-u-primary-color-100">{intl.formatMessage(messages.shareFeedback)}</CardTitle>
+              <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => setModalPage('feedbackOne')}>
+                <CardTitle className="pf-v6-u-primary-color-100">{intl.formatMessage(messages.shareFeedback)}</CardTitle>
                 <CardBody>{intl.formatMessage(messages.howIsConsoleExperience)}</CardBody>
               </Card>
-              <Card className="pf-v5-u-mb-lg" isSelectableRaised isCompact onClick={() => setModalPage('reportBugOne')}>
-                <CardTitle className="pf-v5-u-primary-color-100">{intl.formatMessage(messages.reportABug)}</CardTitle>
+              <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => setModalPage('reportBugOne')}>
+                <CardTitle className="pf-v6-u-primary-color-100">{intl.formatMessage(messages.reportABug)}</CardTitle>
                 <CardBody>{intl.formatMessage(messages.describeBugUrgentCases)}</CardBody>
               </Card>
-              <Card className="pf-v5-u-mb-lg" isSelectableRaised isCompact onClick={() => createSupportCase(user.identity, chromeAuth.token)}>
-                <CardTitle className="pf-v5-u-primary-color-100">
+              <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => createSupportCase(user.identity, chromeAuth.token)}>
+                <CardTitle className="pf-v6-u-primary-color-100">
                   <Text>
                     {intl.formatMessage(messages.openSupportCase)} <ExternalLinkAltIcon />
                   </Text>
                 </CardTitle>
                 <CardBody>{intl.formatMessage(messages.getSupport)}</CardBody>
               </Card>
-              <Card className="pf-v5-u-mb-lg" isSelectableRaised isCompact onClick={() => setModalPage('informDirection')}>
-                <CardTitle className="pf-v5-u-primary-color-100">
+              <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => setModalPage('informDirection')}>
+                <CardTitle className="pf-v6-u-primary-color-100">
                   <Text>{intl.formatMessage(messages.informRedhatDirection)}</Text>
                 </CardTitle>
                 <CardBody>{intl.formatMessage(messages.learnAboutResearchOpportunities)}</CardBody>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { NavGroup } from '@patternfly/react-core/dist/dynamic/components/Nav';
+import { Icon } from '@patternfly/react-core';
+import { NavGroup } from '@patternfly/react-core';
 
 import ChromeNavItemFactory, { sectionTitleMapper } from './ChromeNavItemFactory';
 import { ChromeNavGroupProps } from '../../@types/types';
@@ -14,7 +14,7 @@ const ChromeNavGroup = ({ navItems, isHidden, icon, title }: ChromeNavGroupProps
 
   const groupTitle = (
     <div>
-      <Icon size="sm" className="pf-v5-u-mr-sm" isInline>
+      <Icon size="sm" className="pf-v6-u-mr-sm" isInline>
         {icon && sectionTitleMapper[icon]}
       </Icon>
       {title}

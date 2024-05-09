@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
+import { Button } from '@patternfly/react-core';
 import { useIntl } from 'react-intl';
 import messages from '../../locales/Messages';
 import ChromeAuthContext from '../../auth/ChromeAuthContext';

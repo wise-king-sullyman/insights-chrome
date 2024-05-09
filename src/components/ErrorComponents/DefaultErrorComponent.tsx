@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import * as Sentry from '@sentry/react';
 import { Bullseye } from '@patternfly/react-core/dist/dynamic/layouts/Bullseye';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { EmptyState, EmptyStateActions, EmptyStateBody, EmptyStateIcon } from '@patternfly/react-core/dist/dynamic/components/EmptyState';
-import { ExpandableSection } from '@patternfly/react-core/dist/dynamic/components/ExpandableSection';
+import { Button } from '@patternfly/react-core';
+import { EmptyState, EmptyStateActions, EmptyStateBody } from '@patternfly/react-core';
+import { ExpandableSection } from '@patternfly/react-core';
 import { Flex, FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex';
-import { Text, TextContent } from '@patternfly/react-core/dist/dynamic/components/Text';
-import { Title } from '@patternfly/react-core/dist/dynamic/components/Title';
+import { Text, TextContent } from '@patternfly/react-core';
+import { Title } from '@patternfly/react-core';
 
 import ExclamationCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
 import { chunkLoadErrorRefreshKey } from '../../utils/common';
@@ -72,14 +72,16 @@ const DefaultErrorComponent = (props: DefaultErrorComponentProps) => {
   }
 
   const stack = props.errorInfo?.componentStack || (props.error instanceof Error && props.error?.stack) || props.error;
+  const title = (
+    <Title size="lg" headingLevel="h1">
+      {intl.formatMessage(messages.somethingWentWrong)}&nbsp;
+      {sentryId && intl.formatMessage(messages.globalRuntimeErrorId, { errorId: sentryId })}
+    </Title>
+  );
+
   return (
     <Bullseye className="chr-c-error-component">
-      <EmptyState>
-        <EmptyStateIcon color="var(--pf-v5-global--danger-color--200)" icon={ExclamationCircleIcon} />
-        <Title size="lg" headingLevel="h1">
-          {intl.formatMessage(messages.somethingWentWrong)}&nbsp;
-          {sentryId && intl.formatMessage(messages.globalRuntimeErrorId, { errorId: sentryId })}
-        </Title>
+      <EmptyState titleText={title} status="danger">
         <EmptyStateBody>
           <p className="chr-c-error-component__text">
             {intl.formatMessage(messages.problemProcessingRequest)}{' '}

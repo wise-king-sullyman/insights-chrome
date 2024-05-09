@@ -3,10 +3,10 @@ import classnames from 'classnames';
 import { useSelector } from 'react-redux';
 import GlobalFilter from '../components/GlobalFilter/GlobalFilter';
 import { useScalprum } from '@scalprum/react-core';
-import { Masthead } from '@patternfly/react-core/dist/dynamic/components/Masthead';
-import { Page } from '@patternfly/react-core/dist/dynamic/components/Page';
-import { PageSidebar } from '@patternfly/react-core/dist/dynamic/components/Page';
-import { PageSidebarBody } from '@patternfly/react-core/dist/dynamic/components/Page';
+import { Masthead } from '@patternfly/react-core';
+import { Page } from '@patternfly/react-core';
+import { PageSidebar } from '@patternfly/react-core';
+import { PageSidebarBody } from '@patternfly/react-core';
 import { Header } from '../components/Header/Header';
 import Cookie from 'js-cookie';
 import isEqual from 'lodash/isEqual';
@@ -65,7 +65,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ hasBanner, selectedAccoun
       }
       onPageResize={null} // required to disable PF resize observer that causes re-rendring issue
       header={
-        <Masthead className="chr-c-masthead pf-v5-u-p-0" display={{ sm: 'stack', '2xl': 'inline' }}>
+        <Masthead className="chr-c-masthead pf-v6-u-p-0" display={{ sm: 'stack', '2xl': 'inline' }}>
           <Header
             breadcrumbsProps={{
               isNavOpen,

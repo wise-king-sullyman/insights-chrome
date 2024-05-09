@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Bullseye } from '@patternfly/react-core/dist/dynamic/layouts/Bullseye';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { Spinner } from '@patternfly/react-core/dist/dynamic/components/Spinner';
-import { Text, TextContent } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Icon } from '@patternfly/react-core';
+import { Spinner } from '@patternfly/react-core';
+import { Text, TextContent } from '@patternfly/react-core';
 
 import { ContextSelector, ContextSelectorItem } from '@patternfly/react-core/deprecated';
 
@@ -154,11 +154,11 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
       {user && user?.identity?.account_number?.includes(searchValue) ? (
         <ContextSelectorItem onClick={resetAccountRequest}>
           <TextContent className="chr-c-content-account">
-            <Text className="account-label pf-v5-u-mb-0 sentry-mask data-hj-suppress">
+            <Text className="account-label pf-v6-u-mb-0 sentry-mask data-hj-suppress">
               <span>{user?.identity?.account_number}</span>
               {user?.identity?.account_number === `${selectedAccountNumber}` && (
-                <Icon size="sm" className="pf-v5-u-ml-auto">
-                  <CheckIcon color="var(--pf-v5-global--primary-color--100)" />
+                <Icon size="sm" className="pf-v6-u-ml-auto">
+                  <CheckIcon color="var(--pf-v6-global--primary-color--100)" />
                 </Icon>
               )}
             </Text>
@@ -178,8 +178,8 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
               <Text className="account-label">
                 <span>{target_account}</span>
                 {target_account === selectedAccountNumber && (
-                  <Icon size="sm" className="pf-v5-u-ml-auto">
-                    <CheckIcon color="var(--pf-v5-global--primary-color--100)" />
+                  <Icon size="sm" className="pf-v6-u-ml-auto">
+                    <CheckIcon color="var(--pf-v6-global--primary-color--100)" />
                   </Icon>
                 )}
               </Text>

@@ -17,6 +17,9 @@ const PFGenerator = asGenerator((item, ...rest) => {
       if (base.includes('pf-4-styles')) {
         return [base, path.relative(base, path.resolve(__dirname, '../node_modules/pf-4-styles', item.uri))];
       }
+      if (base.includes('pf-5-styles')) {
+        return [base, path.relative(base, path.resolve(__dirname, '../node_modules/pf-5-styles', item.uri))];
+      }
       if (base.includes('@patternfly/patternfly')) {
         return [base, path.relative(base, path.resolve(__dirname, '../node_modules/@patternfly/patternfly', item.uri))];
       }
@@ -148,7 +151,7 @@ const commonConfig = ({ dev }) => {
       // HMR flag
       hot: true,
       ...proxy({
-        env: 'stage-beta',
+        env: 'prod-stable',
         port: 1337,
         appUrl: [/^\/*$/, /^\/beta\/*$/, /^\/preview\/*$/],
         useProxy: true,
@@ -193,6 +196,7 @@ const pfConfig = {
   entry: {
     'pf4-v4': path.resolve(__dirname, '../src/sass/pf-4-assets.scss'),
     'pf4-v5': path.resolve(__dirname, '../src/sass/pf-5-assets.scss'),
+    'pf4-v6': path.resolve(__dirname, '../src/sass/pf-6-assets.scss'),
   },
   output: {
     path: path.resolve(__dirname, '../build/js/pf'),

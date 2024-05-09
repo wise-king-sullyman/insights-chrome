@@ -1,10 +1,10 @@
 import React, { ReactNode, useContext, useState } from 'react';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Checkbox } from '@patternfly/react-core/dist/dynamic/components/Checkbox';
-import { Form, FormGroup } from '@patternfly/react-core/dist/dynamic/components/Form';
-import { Panel, PanelMain, PanelMainBody } from '@patternfly/react-core/dist/dynamic/components/Panel';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
-import { TextArea } from '@patternfly/react-core/dist/dynamic/components/TextArea';
+import { Button } from '@patternfly/react-core';
+import { Checkbox } from '@patternfly/react-core';
+import { Form, FormGroup } from '@patternfly/react-core';
+import { Panel, PanelMain, PanelMainBody } from '@patternfly/react-core';
+import { Text, TextContent, TextVariants } from '@patternfly/react-core';
+import { TextArea } from '@patternfly/react-core';
 
 import { DeepRequired } from 'utility-types';
 import { ChromeUser } from '@redhat-cloud-services/types';
@@ -107,7 +107,7 @@ const FeedbackForm = ({
             />
           </FormGroup>
         )}
-        <FormGroup className="pf-v5-u-mt-20">
+        <FormGroup className="pf-v6-u-mt-20">
           <Checkbox
             id="feedback-checkbox"
             isChecked={checked}
@@ -119,7 +119,7 @@ const FeedbackForm = ({
       </Form>
       {checked ? (
         <>
-          <div className="pf-v5-u-font-family-heading-sans-serif chr-c-feedback-email">{intl.formatMessage(messages.email)}</div>
+          <div className="pf-v6-u-font-family-heading-sans-serif chr-c-feedback-email">{intl.formatMessage(messages.email)}</div>
           <Panel variant="raised" className="chr-c-feedback-panel">
             <PanelMain>
               <PanelMainBody className="chr-c-feedback-panel__body">{user.identity.user.email}</PanelMainBody>

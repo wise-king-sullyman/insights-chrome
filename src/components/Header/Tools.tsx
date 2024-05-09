@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { memo, useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { AlertActionLink, AlertVariant } from '@patternfly/react-core/dist/dynamic/components/Alert';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Divider } from '@patternfly/react-core/dist/dynamic/components/Divider';
-import { DropdownItem } from '@patternfly/react-core/dist/dynamic/components/Dropdown';
-import { NotificationBadge } from '@patternfly/react-core/dist/dynamic/components/NotificationBadge';
-import { Switch } from '@patternfly/react-core/dist/dynamic/components/Switch';
-import { ToolbarItem } from '@patternfly/react-core/dist/dynamic/components/Toolbar';
-import { Tooltip } from '@patternfly/react-core/dist/dynamic/components/Tooltip';
+import { AlertActionLink, AlertVariant } from '@patternfly/react-core';
+import { Button } from '@patternfly/react-core';
+import { Divider } from '@patternfly/react-core';
+import { DropdownItem } from '@patternfly/react-core';
+import { NotificationBadge } from '@patternfly/react-core';
+import { Switch } from '@patternfly/react-core';
+import { ToolbarItem } from '@patternfly/react-core';
+import { Tooltip } from '@patternfly/react-core';
 import QuestionCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/question-circle-icon';
 import CogIcon from '@patternfly/react-icons/dist/dynamic/icons/cog-icon';
 import RedhatIcon from '@patternfly/react-icons/dist/dynamic/icons/redhat-icon';
@@ -295,7 +295,7 @@ const Tools = () => {
   return (
     <>
       <ToolbarItem
-        className="pf-v5-u-mr-0"
+        className="pf-v6-u-mr-0"
         {...(isNotificationsEnabled && {
           spacer: {
             default: 'spacerMd',
@@ -305,7 +305,7 @@ const Tools = () => {
         {!xs && <BetaSwitcher />}
       </ToolbarItem>
       {isNotificationsEnabled && (
-        <ToolbarItem className="pf-v5-u-mr-0 pf-v5-u-ml-sm">
+        <ToolbarItem className="pf-v6-u-mr-0 pf-v6-u-ml-sm">
           <Tooltip aria="none" aria-live="polite" content={'Notifications'} flipBehavior={['bottom']} className="tooltip-inner-settings-cy">
             <NotificationBadge
               className="chr-c-notification-badge"
@@ -325,23 +325,23 @@ const Tools = () => {
         </ToolbarItem>
       )}
       {isInternal && !ITLess() && (
-        <ToolbarItem className="pf-v5-u-mr-0">
+        <ToolbarItem className="pf-v6-u-mr-0">
           <Tooltip aria="none" aria-live="polite" content={'Internal'} flipBehavior={['bottom']}>
             <InternalButton />
           </Tooltip>
         </ToolbarItem>
       )}
-      <ToolbarItem className="pf-v5-u-mr-0" visibility={{ default: 'hidden', md: 'visible' }}>
+      <ToolbarItem className="pf-v6-u-mr-0" visibility={{ default: 'hidden', md: 'visible' }}>
         {enableExpandedSettings ? (
           <ExpandedSettingsButton settingsMenuDropdownGroups={settingsMenuDropdownGroups} />
         ) : (
           <SettingsButton settingsMenuDropdownItems={settingsMenuDropdownItems} />
         )}
       </ToolbarItem>
-      <ToolbarItem className="pf-v5-u-mr-0" visibility={{ default: 'hidden', md: 'visible' }}>
+      <ToolbarItem className="pf-v6-u-mr-0" visibility={{ default: 'hidden', md: 'visible' }}>
         <AboutButton />
       </ToolbarItem>
-      <ToolbarItem className="pf-v5-u-mr-0" visibility={{ default: 'hidden', lg: 'visible' }}>
+      <ToolbarItem className="pf-v6-u-mr-0" visibility={{ default: 'hidden', lg: 'visible' }}>
         <UserToggle />
       </ToolbarItem>
       {/* Collapse tools and user dropdown to kebab on small screens  */}

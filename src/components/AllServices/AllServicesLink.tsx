@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { Text, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
+import { Text, TextVariants } from '@patternfly/react-core';
+import { Icon } from '@patternfly/react-core';
 
 import classNames from 'classnames';
 import { matchPath } from 'react-router-dom';
@@ -49,7 +49,7 @@ const AllServicesLink = ({ href, title, isExternal, category, group }: AllServic
       >
         {title}
         {isExternal && (
-          <Icon className="pf-v5-u-ml-sm chr-c-icon-external-link" isInline>
+          <Icon className="pf-v6-u-ml-sm chr-c-icon-external-link" isInline>
             <ExternalLinkAltIcon />
           </Icon>
         )}
@@ -59,7 +59,7 @@ const AllServicesLink = ({ href, title, isExternal, category, group }: AllServic
           data-ouia-component-id={`${category}-${group ? `${group}-` : ''}${titleToId(title)}-FavoriteToggle`}
           onClick={() => handleFavouriteToggle(href, isFavorite)}
           aria-label={`${isFavorite ? 'Unfavorite' : 'Favorite'} ${title}`}
-          className="pf-v5-u-ml-sm chr-c-icon-star"
+          className="pf-v6-u-ml-sm chr-c-icon-star"
           isInline
         >
           <StarIcon />

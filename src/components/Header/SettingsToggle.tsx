@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Dropdown, DropdownGroup, DropdownItem, DropdownList } from '@patternfly/react-core/dist/dynamic/components/Dropdown';
-import { Divider } from '@patternfly/react-core/dist/dynamic/components/Divider';
-import { MenuToggle } from '@patternfly/react-core/dist/dynamic/components/MenuToggle';
-import { PopoverPosition } from '@patternfly/react-core/dist/dynamic/components/Popover';
+import { Dropdown, DropdownGroup, DropdownItem, DropdownList } from '@patternfly/react-core';
+import { Divider } from '@patternfly/react-core';
+import { MenuToggle } from '@patternfly/react-core';
+import { PopoverPosition } from '@patternfly/react-core';
 
 import ChromeLink from '../ChromeLink/ChromeLink';
 import { isBeta } from '../../utils/common';

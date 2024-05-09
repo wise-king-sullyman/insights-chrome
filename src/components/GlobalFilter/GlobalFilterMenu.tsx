@@ -6,12 +6,12 @@ import messages from '../../locales/Messages';
 
 import './global-filter-menu.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Chip, ChipGroup } from '@patternfly/react-core/dist/dynamic/components/Chip';
-import { Divider } from '@patternfly/react-core/dist/dynamic/components/Divider';
-import { Skeleton } from '@patternfly/react-core/dist/dynamic/components/Skeleton';
+import { Label, LabelGroup, Button } from '@patternfly/react-core';
+
+import { Divider } from '@patternfly/react-core';
+import { Skeleton } from '@patternfly/react-core';
 import { Split, SplitItem } from '@patternfly/react-core/dist/dynamic/layouts/Split';
-import { Tooltip } from '@patternfly/react-core/dist/dynamic/components/Tooltip';
+import { Tooltip } from '@patternfly/react-core';
 import TagsModal from './TagsModal';
 import { FilterMenuItemOnChange } from '@redhat-cloud-services/frontend-components/ConditionalFilter/groupFilterConstants';
 import { CommonSelectedTag, ReduxState } from '../../redux/store';
@@ -124,18 +124,18 @@ export const GlobalFilterDropdown: React.FunctionComponent<GlobalFilterDropdownP
             {chips?.length > 0 && (
               <Fragment>
                 {chips.map(({ category, chips }, key) => (
-                  <ChipGroup key={key} categoryName={category} className={category === 'Workloads' ? 'chr-c-chip' : ''}>
+                  <LabelGroup key={key} categoryName={category} className={category === 'Workloads' ? 'chr-c-chip' : ''}>
                     {chips?.map(({ key: chipName, tagKey, value }, chipKey) => (
-                      <Chip
+                      <Label variant="outline"
                         key={chipKey}
-                        onClick={() => setValue(() => updateSelected(selectedTags, category, chipName, value, false, {}))}
-                        isReadOnly={isDisabled}
+                        onClose={() => setValue(() => updateSelected(selectedTags, category, chipName, value, false, {}))}
+                        // isReadOnly={isDisabled}
                       >
                         {tagKey}
                         {value ? `=${value}` : ''}
-                      </Chip>
+                      </Label>
                     ))}
-                  </ChipGroup>
+                  </LabelGroup>
                 ))}
                 {!isDisabled && (
                   <Button

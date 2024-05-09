@@ -1,6 +1,6 @@
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Modal, ModalVariant } from '@patternfly/react-core/dist/dynamic/components/Modal';
-import { Title } from '@patternfly/react-core/dist/dynamic/components/Title';
+import { Button } from '@patternfly/react-core';
+import { Modal, ModalVariant } from '@patternfly/react-core';
+import { Title } from '@patternfly/react-core';
 import { Stack, StackItem } from '@patternfly/react-core/dist/dynamic/layouts/Stack';
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';

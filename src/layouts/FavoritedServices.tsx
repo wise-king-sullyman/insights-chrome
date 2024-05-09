@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Masthead } from '@patternfly/react-core/dist/dynamic/components/Masthead';
-import { Page, PageSection, PageSectionVariants } from '@patternfly/react-core/dist/dynamic/components/Page';
+import { Masthead } from '@patternfly/react-core';
+import { Page, PageSection } from '@patternfly/react-core';
 import { Stack, StackItem } from '@patternfly/react-core/dist/dynamic/layouts/Stack';
-import { Title } from '@patternfly/react-core/dist/dynamic/components/Title';
+import { Title } from '@patternfly/react-core';
 
 import { Header } from '../components/Header/Header';
 import RedirectBanner from '../components/Stratosphere/RedirectBanner';
@@ -34,9 +34,9 @@ const FavoritedServices = ({ Footer }: FavoritedServicesProps) => {
         }
       >
         <RedirectBanner />
-        <PageSection variant={PageSectionVariants.light} className="pf-v5-u-px-2xl-on-md pf-v5-m-fill">
-          <Stack className="pf-v5-u-background-color-100">
-            <StackItem className="pf-v5-u-pb-md">
+        <PageSection className="pf-v6-u-px-2xl-on-md pf-v5-m-fill">
+          <Stack className="pf-v6-u-background-color-100">
+            <StackItem className="pf-v6-u-pb-md">
               <Title headingLevel="h2">Favorited Services</Title>
             </StackItem>
             <QuickAccess />

@@ -4,12 +4,12 @@ import {
   NotificationDrawerListItem,
   NotificationDrawerListItemBody,
   NotificationDrawerListItemHeader,
-} from '@patternfly/react-core/dist/dynamic/components/NotificationDrawer';
-import { PopoverPosition } from '@patternfly/react-core/dist/dynamic/components/Popover';
-import { Checkbox } from '@patternfly/react-core/dist/dynamic/components/Checkbox';
-import { Label } from '@patternfly/react-core/dist/dynamic/components/Label';
-import { MenuToggle, MenuToggleElement } from '@patternfly/react-core/dist/dynamic/components/MenuToggle';
-import { Dropdown, DropdownItem, DropdownList } from '@patternfly/react-core/dist/dynamic/components/Dropdown';
+} from '@patternfly/react-core';
+import { PopoverPosition } from '@patternfly/react-core';
+import { Checkbox } from '@patternfly/react-core';
+import { Label } from '@patternfly/react-core';
+import { MenuToggle, MenuToggleElement } from '@patternfly/react-core';
+import { Dropdown, DropdownItem, DropdownList } from '@patternfly/react-core';
 import EllipsisVIcon from '@patternfly/react-icons/dist/dynamic/icons/ellipsis-v-icon';
 import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
 import { useDispatch } from 'react-redux';

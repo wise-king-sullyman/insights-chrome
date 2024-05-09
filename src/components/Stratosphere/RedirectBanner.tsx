@@ -1,6 +1,6 @@
 import React from 'react';
-import { Alert, AlertActionCloseButton } from '@patternfly/react-core/dist/dynamic/components/Alert';
-import { Text, TextContent } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Alert, AlertActionCloseButton } from '@patternfly/react-core';
+import { Text, TextContent } from '@patternfly/react-core';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ReduxState } from '../../redux/store';

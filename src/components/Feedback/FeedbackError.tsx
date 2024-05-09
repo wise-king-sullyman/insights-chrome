@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { Icon } from '@patternfly/react-core/dist/dynamic/components/Icon';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core/dist/dynamic/components/Text';
+import { Button } from '@patternfly/react-core';
+import { Icon } from '@patternfly/react-core';
+import { Text, TextContent, TextVariants } from '@patternfly/react-core';
 import CheckIcon from '@patternfly/react-icons/dist/dynamic/icons/check-icon';
 import { useIntl } from 'react-intl';
 
@@ -18,7 +18,7 @@ const FeedbackError = ({ onCloseModal }: FeedbackErrorProps) => {
   return (
     <div className="chr-c-feedback-success-content">
       <Icon size="md">
-        <CheckIcon color="var(--pf-v5-global--success-color--100)" className="pf-v5-u-mx-auto" />
+        <CheckIcon color="var(--pf-v6-global--success-color--100)" className="pf-v6-u-mx-auto" />
       </Icon>
       <TextContent>
         <Text component={TextVariants.h1}>{intl.formatMessage(messages.somethingWentWrong)}</Text>

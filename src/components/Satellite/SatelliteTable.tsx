@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Table, TableText, Tbody, Td, Th, Thead, Tr } from '@patternfly/react-table';
-import { Button } from '@patternfly/react-core/dist/dynamic/components/Button';
-import { EmptyState } from '@patternfly/react-core/dist/dynamic/components/EmptyState';
+import { Button } from '@patternfly/react-core';
+import { EmptyState } from '@patternfly/react-core';
 
 interface Registration {
   uid: string;
@@ -53,7 +53,7 @@ const SatelliteTable: React.FC = () => {
     }
   }, [ready]);
   if (registrations?.length < 1) {
-    return <EmptyState>There are no registrations</EmptyState>;
+    return <EmptyState titleText="There are no registrations" />;
   }
   return (
     <Table aria-label="Misc table">

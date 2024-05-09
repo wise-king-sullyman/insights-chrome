@@ -1,19 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { PopoverPosition } from '@patternfly/react-core/dist/dynamic/components/Popover';
-import { Badge } from '@patternfly/react-core/dist/dynamic/components/Badge';
+import { PopoverPosition } from '@patternfly/react-core';
+import { Badge } from '@patternfly/react-core';
 import { Flex, FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex';
-import { Dropdown, DropdownGroup, DropdownItem, DropdownList } from '@patternfly/react-core/dist/dynamic/components/Dropdown';
-import { MenuToggle, MenuToggleElement } from '@patternfly/react-core/dist/dynamic/components/MenuToggle';
-import { Divider } from '@patternfly/react-core/dist/dynamic/components/Divider';
-import { EmptyState, EmptyStateBody, EmptyStateIcon } from '@patternfly/react-core/dist/dynamic/components/EmptyState';
-import {
-  NotificationDrawer,
-  NotificationDrawerBody,
-  NotificationDrawerHeader,
-  NotificationDrawerList,
-} from '@patternfly/react-core/dist/dynamic/components/NotificationDrawer';
-import { Text } from '@patternfly/react-core/dist/dynamic/components/Text';
-import { Title } from '@patternfly/react-core/dist/dynamic/components/Title';
+import { Dropdown, DropdownGroup, DropdownItem, DropdownList } from '@patternfly/react-core';
+import { MenuToggle, MenuToggleElement } from '@patternfly/react-core';
+import { Divider } from '@patternfly/react-core';
+import { EmptyState, EmptyStateBody, EmptyStateIcon } from '@patternfly/react-core';
+import { NotificationDrawer, NotificationDrawerBody, NotificationDrawerHeader, NotificationDrawerList } from '@patternfly/react-core';
+import { Text } from '@patternfly/react-core';
+import { Title } from '@patternfly/react-core';
 import { useDispatch, useSelector } from 'react-redux';
 import FilterIcon from '@patternfly/react-icons/dist/dynamic/icons/filter-icon';
 import BellSlashIcon from '@patternfly/react-icons/dist/dynamic/icons/bell-slash-icon';
@@ -31,36 +26,40 @@ export type DrawerPanelProps = {
   innerRef: React.Ref<unknown>;
 };
 
-const EmptyNotifications = ({ isOrgAdmin, onLinkClick }: { onLinkClick: () => void; isOrgAdmin?: boolean }) => (
-  <EmptyState>
-    <EmptyStateIcon icon={BellSlashIcon} />
+const EmptyNotifications = ({ isOrgAdmin, onLinkClick }: { onLinkClick: () => void; isOrgAdmin?: boolean }) => {
+  const title = (
     <Title headingLevel="h4" size="lg">
       No notifications found
     </Title>
-    <EmptyStateBody>
-      {isOrgAdmin ? (
-        <Text>
-          Try&nbsp;
-          <Link onClick={onLinkClick} to="/settings/notifications/user-preferences">
-            checking your notification preferences
-          </Link>
-          &nbsp;and managing the&nbsp;
-          <Link onClick={onLinkClick} to="/settings/notifications/configure-events">
-            notification configuration
-          </Link>
-          &nbsp;for your organization.
-        </Text>
-      ) : (
-        <>
-          <Link onClick={onLinkClick} to="/settings/notifications/configure-events">
-            Configure notification settings
-          </Link>
-          .<Text>Contact your organization administrator.</Text>
-        </>
-      )}
-    </EmptyStateBody>
-  </EmptyState>
-);
+  );
+
+  return (
+    <EmptyState icon={BellSlashIcon} titleText={title}>
+      <EmptyStateBody>
+        {isOrgAdmin ? (
+          <Text>
+            Try&nbsp;
+            <Link onClick={onLinkClick} to="/settings/notifications/user-preferences">
+              checking your notification preferences
+            </Link>
+            &nbsp;and managing the&nbsp;
+            <Link onClick={onLinkClick} to="/settings/notifications/configure-events">
+              notification configuration
+            </Link>
+            &nbsp;for your organization.
+          </Text>
+        ) : (
+          <>
+            <Link onClick={onLinkClick} to="/settings/notifications/configure-events">
+              Configure notification settings
+            </Link>
+            .<Text>Contact your organization administrator.</Text>
+          </>
+        )}
+      </EmptyStateBody>
+    </EmptyState>
+  );
+};
 
 const DrawerPanelBase = ({ innerRef }: DrawerPanelProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

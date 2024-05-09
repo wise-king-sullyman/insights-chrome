@@ -2,8 +2,8 @@ import React, { Fragment, useContext, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Tools from './Tools';
 import UnAuthtedHeader from './UnAuthtedHeader';
-import { MastheadBrand, MastheadContent, MastheadMain } from '@patternfly/react-core/dist/dynamic/components/Masthead';
-import { Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem } from '@patternfly/react-core/dist/dynamic/components/Toolbar';
+import { MastheadBrand, MastheadContent, MastheadMain } from '@patternfly/react-core';
+import { Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem } from '@patternfly/react-core';
 import SatelliteLink from './SatelliteLink';
 import ContextSwitcher from '../ContextSwitcher';
 import Feedback from '../Feedback';
@@ -51,19 +51,19 @@ export const Header = ({ breadcrumbsProps }: { breadcrumbsProps?: Breadcrumbspro
 
   return (
     <Fragment>
-      <MastheadMain className="pf-v5-u-pl-lg pf-v5-u-pt-0 pf-v5-u-pb-xs">
-        <MastheadBrand className="pf-v5-u-flex-shrink-0 pf-v5-u-mr-lg" component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
+      <MastheadMain className="pf-v6-u-pl-lg pf-v6-u-pt-0 pf-v6-u-pb-xs">
+        <MastheadBrand className="pf-v6-u-flex-shrink-0 pf-v6-u-mr-lg" component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
           <Logo />
         </MastheadBrand>
         <Toolbar isFullHeight>
           <ToolbarContent>
-            <ToolbarGroup className="pf-v5-m-icon-button-group pf-v5-u-ml-auto" widget-type="InsightsToolbar" visibility={{ '2xl': 'hidden' }}>
+            <ToolbarGroup className="pf-v5-m-icon-button-group pf-v6-u-ml-auto" widget-type="InsightsToolbar" visibility={{ '2xl': 'hidden' }}>
               {!lg && <HeaderTools />}
             </ToolbarGroup>
           </ToolbarContent>
         </Toolbar>
       </MastheadMain>
-      <MastheadContent className="pf-v5-u-mx-md pf-v5-u-mx-0-on-2xl">
+      <MastheadContent className="pf-v6-u-mx-md pf-v6-u-mx-0-on-2xl">
         {user?.identity?.org_id && !isITLessEnv && ReactDOM.createPortal(<FeedbackRoute />, document.body)}
         {user && isActivationPath && <Activation user={user} request={search} />}
         <Toolbar isFullHeight>
@@ -81,11 +81,11 @@ export const Header = ({ breadcrumbsProps }: { breadcrumbsProps?: Breadcrumbspro
                 </ToolbarItem>
               )}
             </ToolbarGroup>
-            <ToolbarGroup className="pf-v5-u-flex-grow-1 pf-v5-u-mr-0 pf-v5-u-mr-md-on-2xl" variant="filter-group">
+            <ToolbarGroup className="pf-v6-u-flex-grow-1 pf-v6-u-mr-0 pf-v6-u-mr-md-on-2xl" variant="filter-group">
               <SearchInput onStateChange={hideAllServices} />
             </ToolbarGroup>
             <ToolbarGroup
-              className="pf-v5-m-icon-button-group pf-v5-u-ml-auto"
+              className="pf-v5-m-icon-button-group pf-v6-u-ml-auto"
               visibility={{ default: 'hidden', '2xl': 'visible' }}
               widget-type="InsightsToolbar"
             >

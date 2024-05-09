@@ -1,15 +1,15 @@
 import './UserToggle.scss';
 
-import { Dropdown, DropdownItem, DropdownList } from '@patternfly/react-core/dist/dynamic/components/Dropdown';
+import { Dropdown, DropdownItem, DropdownList } from '@patternfly/react-core';
 import { ITLess, getEnv, isProd as isProdEnv } from '../../utils/common';
 import React, { useContext, useRef, useState } from 'react';
 
 import ChromeLink from '../ChromeLink/ChromeLink';
-import { Divider } from '@patternfly/react-core/dist/dynamic/components/Divider';
+import { Divider } from '@patternfly/react-core';
 import { EllipsisVIcon } from '@patternfly/react-icons/dist/dynamic/icons/ellipsis-v-icon';
-import { MenuToggle } from '@patternfly/react-core/dist/dynamic/components/MenuToggle';
+import { MenuToggle } from '@patternfly/react-core';
 import QuestionCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/question-circle-icon';
-import { Tooltip } from '@patternfly/react-core/dist/dynamic/components/Tooltip';
+import { Tooltip } from '@patternfly/react-core';
 import UserIcon from './UserIcon';
 import classNames from 'classnames';
 import messages from '../../locales/Messages';
@@ -60,7 +60,7 @@ const DropdownItems = ({
                 <>
                   <dt className="chr-c-dropdown-item__stack--header">
                     {intl.formatMessage(messages.accountNumber)}
-                    <span ref={questionMarkRef} className="visible-pointer pf-v5-u-ml-sm">
+                    <span ref={questionMarkRef} className="visible-pointer pf-v6-u-ml-sm">
                       <QuestionCircleIcon />
                     </span>
                   </dt>
@@ -173,7 +173,7 @@ const UserToggle = ({ isSmall = false, extraItems = [] }: UserToggleProps) => {
           isFullHeight
           onClick={onToggle}
           variant={isSmall ? 'plain' : undefined}
-          className={classNames('data-hj-suppress', 'sentry-mask', { 'pf-v5-u-pr-lg pf-v5-u-pl-lg': isSmall })}
+          className={classNames('data-hj-suppress', 'sentry-mask', { 'pf-v6-u-pr-lg pf-v6-u-pl-lg': isSmall })}
           {...(isSmall
             ? {
                 id: 'UserMenu',
