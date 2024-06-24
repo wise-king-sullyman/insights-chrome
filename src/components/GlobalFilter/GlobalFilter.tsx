@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { batch, shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { useTagsFilter } from '@redhat-cloud-services/frontend-components/FilterHooks';
+import { useTagsFilter } from '@ausuliv/frontend-components/FilterHooks';
 import debounce from 'lodash/debounce';
 import { fetchAllSIDs, fetchAllTags, fetchAllWorkloads, globalFilterChange } from '../../redux/actions';
 import { generateFilter } from './globalFilterApi';

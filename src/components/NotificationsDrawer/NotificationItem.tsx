@@ -11,7 +11,7 @@ import { Label } from '@patternfly/react-core';
 import { MenuToggle, MenuToggleElement } from '@patternfly/react-core';
 import { Dropdown, DropdownItem, DropdownList } from '@patternfly/react-core';
 import EllipsisVIcon from '@patternfly/react-icons/dist/dynamic/icons/ellipsis-v-icon';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
 import { useDispatch } from 'react-redux';
 import { NotificationData } from '../../redux/store';
 import { markNotificationAsRead, markNotificationAsUnread } from '../../redux/actions';

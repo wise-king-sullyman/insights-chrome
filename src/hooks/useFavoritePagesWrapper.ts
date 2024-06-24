@@ -1,4 +1,4 @@
-import { useFavoritePages } from '@redhat-cloud-services/chrome';
+import { useFavoritePages } from '@ausuliv/chrome';
 import { useSegment } from '../analytics/useSegment';
 
 const FAVORITE_PAGE_EVENT = 'page-favorite';

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 import messages from '../../locales/Messages';
-import { FilterMenuItemOnChange } from '@redhat-cloud-services/frontend-components/ConditionalFilter/groupFilterConstants';
-import { Group } from '@redhat-cloud-services/frontend-components/ConditionalFilter';
-import { GroupFilter } from '@redhat-cloud-services/frontend-components/ConditionalFilter';
+import { FilterMenuItemOnChange } from '@ausuliv/frontend-components/ConditionalFilter/groupFilterConstants';
+import { Group } from '@ausuliv/frontend-components/ConditionalFilter';
+import { GroupFilter } from '@ausuliv/frontend-components/ConditionalFilter';
 import { Button, InputGroup, InputGroupItem, Popover, PopoverPosition } from '@patternfly/react-core';
 import { OutlinedQuestionCircleIcon } from '@patternfly/react-icons';
 import { FlagTagsFilter } from '../../@types/types';

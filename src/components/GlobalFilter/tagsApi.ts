@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // FIXME: Figure out what are the issues with the JS client
 /* eslint-disable camelcase */
-import instance from '@redhat-cloud-services/frontend-components-utilities/interceptors';
+import instance from '@ausuliv/frontend-components-utilities/interceptors';
 import { AAP_KEY, INVENTORY_API_BASE, MSSQL_KEY, flatTags } from './globalFilterApi';
 import { HostsApi, SystemProfileApi, TagsApi } from '@redhat-cloud-services/host-inventory-client';
 import { FlagTagsFilter } from '../../@types/types';

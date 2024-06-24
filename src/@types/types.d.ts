@@ -1,7 +1,7 @@
 import { QuickStart, QuickStartCatalogPage } from '@patternfly/quickstarts';
 import { VisibilityFunctions } from '@redhat-cloud-services/types';
 import { AnalyticsBrowser } from '@segment/analytics-next';
-import type { Group, GroupFilterItem } from '@redhat-cloud-services/frontend-components/ConditionalFilter';
+import type { Group, GroupFilterItem } from '@ausuliv/frontend-components/ConditionalFilter';
 import type Intercom from '@types/intercom-web';
 
 import { AddHelpTopic, DisableTopics, EnableTopics } from '../components/QuickStart/useHelpTopicState';

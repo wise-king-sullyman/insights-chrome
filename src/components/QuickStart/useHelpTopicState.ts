@@ -1,5 +1,5 @@
 import { HelpTopic } from '@patternfly/quickstarts';
-import instance from '@redhat-cloud-services/frontend-components-utilities/interceptors';
+import instance from '@ausuliv/frontend-components-utilities/interceptors';
 import { Reducer, useReducer } from 'react';
 
 export type AddHelpTopic = (topics: HelpTopic[], enabled?: boolean) => void;

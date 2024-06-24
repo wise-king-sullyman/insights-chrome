@@ -5,7 +5,7 @@ import { Flex, FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex
 import { Dropdown, DropdownGroup, DropdownItem, DropdownList } from '@patternfly/react-core';
 import { MenuToggle, MenuToggleElement } from '@patternfly/react-core';
 import { Divider } from '@patternfly/react-core';
-import { EmptyState, EmptyStateBody, EmptyStateIcon } from '@patternfly/react-core';
+import { EmptyState, EmptyStateBody } from '@patternfly/react-core';
 import { NotificationDrawer, NotificationDrawerBody, NotificationDrawerHeader, NotificationDrawerList } from '@patternfly/react-core';
 import { Text } from '@patternfly/react-core';
 import { Title } from '@patternfly/react-core';

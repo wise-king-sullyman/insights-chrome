@@ -7,7 +7,7 @@ import { HelpTopic, HelpTopicContext } from '@patternfly/quickstarts';
 import isEqual from 'lodash/isEqual';
 import { AppsConfig } from '@scalprum/core';
 import { ChromeAPI, EnableTopicsArgs } from '@redhat-cloud-services/types';
-import { ChromeProvider } from '@redhat-cloud-services/chrome';
+import { ChromeProvider } from '@ausuliv/chrome';
 import { useSetAtom } from 'jotai';
 
 import chromeHistory from '../../utils/chromeHistory';

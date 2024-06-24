@@ -5,7 +5,7 @@ Chrome comes with a JavaScript API that allows applications to control navigatio
 The API is available via the `useChrome` hook exposed from the frontend components package.
 
 ```jsx
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 
 const Component = () => {
     const chrome = useChrome()
@@ -205,7 +205,7 @@ Once you register the module you can use [AsyncComponent](https://github.com/Red
 
 ```JSX
 import { React } from 'react'
-import AsyncComponent from '@redhat-cloud-services/frontend-components/AsyncComponent';
+import AsyncComponent from '@ausuliv/frontend-components/AsyncComponent';
 
 const MyCmp = () => <AsyncComponent appName="rbac" module="./Detail" />;
 

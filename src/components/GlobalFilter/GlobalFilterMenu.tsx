@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useMemo } from 'react';
-import { Group, GroupType } from '@redhat-cloud-services/frontend-components/ConditionalFilter';
+import { Group, GroupType } from '@ausuliv/frontend-components/ConditionalFilter';
 import { useIntl } from 'react-intl';
 
 import messages from '../../locales/Messages';
@@ -13,7 +13,7 @@ import { Skeleton } from '@patternfly/react-core';
 import { Split, SplitItem } from '@patternfly/react-core/dist/dynamic/layouts/Split';
 import { Tooltip } from '@patternfly/react-core';
 import TagsModal from './TagsModal';
-import { FilterMenuItemOnChange } from '@redhat-cloud-services/frontend-components/ConditionalFilter/groupFilterConstants';
+import { FilterMenuItemOnChange } from '@ausuliv/frontend-components/ConditionalFilter/groupFilterConstants';
 import { CommonSelectedTag, ReduxState } from '../../redux/store';
 import { updateSelected } from './globalFilterApi';
 import { fetchAllTags } from '../../redux/actions';

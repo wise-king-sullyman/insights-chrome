@@ -1,4 +1,4 @@
-import { applyReducerHash } from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
+import { applyReducerHash } from '@ausuliv/frontend-components-utilities/ReducerRegistry';
 
 import {
   accessRequestsNotificationsReducer,

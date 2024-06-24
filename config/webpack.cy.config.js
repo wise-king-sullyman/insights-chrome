@@ -3,7 +3,7 @@ const path = require('path');
 const { createJoinFunction, createJoinImplementation, asGenerator, defaultJoinGenerator } = require('resolve-url-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
-const searchIgnoredStyles = require('@redhat-cloud-services/frontend-components-config-utilities/search-ignored-styles');
+const searchIgnoredStyles = require('@ausuliv/frontend-components-config-utilities/search-ignored-styles');
 
 // call default generator then pair different variations of uri with each base
 const PFGenerator = asGenerator((item, ...rest) => {

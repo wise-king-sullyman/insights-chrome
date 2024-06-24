@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ScalprumProvider } from '@scalprum/react-core';
 import chromeReducer, { chromeInitialState } from '../../src/redux';
-import ReducerRegistry from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
+import ReducerRegistry from '@ausuliv/frontend-components-utilities/ReducerRegistry';
 import { IntlProvider } from 'react-intl';
 import { FeatureFlagsProvider } from '../../src/components/FeatureFlags';
 import UserToggle from '../../src/components/Header/UserToggle';

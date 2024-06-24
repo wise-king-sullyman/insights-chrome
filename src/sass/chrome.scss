@@ -1,7 +1,7 @@
 $pf-v6-global--enable-reset: 'true';
 
-@import '~@patternfly/patternfly/sass-utilities/_all';
-@import '~@redhat-cloud-services/frontend-components/FilterHooks/tagFilterHook.scss';
+@import '~@patternfly/patternfly/sass-utilities/_index';
+@import '~@ausuliv/frontend-components/FilterHooks/tagFilterHook.scss';
 
 // TODO: Bring these quick starts overrides into the lib instead 
 .pfext-page-layout__title {
@@ -88,11 +88,11 @@ aside {
   }
 }
 
-@media only screen and (max-width: $pf-v6-global--breakpoint--md) {
+@media only screen and (max-width: var(pf-t--global--breakpoint--md)) {
   .ins-m-hide-on-md {display: none;}
 }
 
-@media only screen and (max-width: $pf-v6-global--breakpoint--sm) {
+@media only screen and (max-width: var(pf-t--global--breakpoint--sm)) {
   .ins-m-hide-on-sm {display: none;}
 
   .ins-c-table-empty-state.pf-m-grid-md.pf-v6-c-table,
@@ -122,7 +122,7 @@ aside {
   padding-right: var(--pf-global--spacer--xl);
   width: 100%;
 
-  @media only screen and (max-width: $pf-v6-global--breakpoint--lg) {
+  @media only screen and (max-width: var(pf-t--global--breakpoint--lg)) {
     .truste-banner {
       display: flex;
       flex-direction: column;

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { ScalprumProvider } from '@scalprum/react-core';
 import chromeReducer, { chromeInitialState } from '../../src/redux';
 import DefaultLayout from '../../src/layouts/DefaultLayout';
-import ReducerRegistry from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
+import ReducerRegistry from '@ausuliv/frontend-components-utilities/ReducerRegistry';
 import { Nav, NavList } from '@patternfly/react-core';
 import ChromeNavItem from '../../src/components/Navigation/ChromeNavItem';
 import { IntlProvider } from 'react-intl';

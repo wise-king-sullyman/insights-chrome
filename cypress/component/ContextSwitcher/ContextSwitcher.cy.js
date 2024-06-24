@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import chromeReducer, { chromeInitialState } from '../../../src/redux';
-import ReducerRegistry from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
+import ReducerRegistry from '@ausuliv/frontend-components-utilities/ReducerRegistry';
 import { IntlProvider } from 'react-intl';
 import ContextSwitcher from '../../../src/components/ContextSwitcher';
 

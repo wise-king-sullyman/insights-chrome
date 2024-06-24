@@ -1,6 +1,6 @@
 import { useContext, useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
-import { VisitedBundles, useVisitedBundles } from '@redhat-cloud-services/chrome';
+import { VisitedBundles, useVisitedBundles } from '@ausuliv/chrome';
 import axios from 'axios';
 import { getUrl } from './useBundle';
 import ChromeAuthContext from '../auth/ChromeAuthContext';

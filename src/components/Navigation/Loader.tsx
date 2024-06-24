@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Skeleton, SkeletonSize } from '@redhat-cloud-services/frontend-components/Skeleton';
+import { Skeleton, SkeletonSize } from '@ausuliv/frontend-components/Skeleton';
 import { Nav, NavItem, NavList } from '@patternfly/react-core';
 
 const NavLoader = () => (

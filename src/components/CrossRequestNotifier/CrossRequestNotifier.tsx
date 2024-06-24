@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import Portal, { PortalNotificationConfig } from '@redhat-cloud-services/frontend-components-notifications/Portal';
+import Portal, { PortalNotificationConfig } from '@ausuliv/frontend-components-notifications/Portal';
 import { AlertVariant } from '@patternfly/react-core';
 import { ACCOUNT_REQUEST_TIMEOUT, ACTIVE_ACCOUNT_SWITCH_NOTIFICATION } from '../../utils/consts';
 import useAccessRequestNotifier from '../../utils/useAccessRequestNotifier';

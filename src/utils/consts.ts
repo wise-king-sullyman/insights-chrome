@@ -1,6 +1,6 @@
 import { ITLess } from './common';
 import { AppNavigationCB, ChromeAuthOptions, GenericCB, NavDOMEvent } from '../@types/types';
-import { Listener } from '@redhat-cloud-services/frontend-components-utilities/MiddlewareListener';
+import { Listener } from '@ausuliv/frontend-components-utilities/MiddlewareListener';
 import { APP_NAV_CLICK, GLOBAL_FILTER_UPDATE } from '../redux/action-types';
 
 export const noAuthParam = 'noauth';

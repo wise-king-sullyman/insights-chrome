@@ -29,7 +29,7 @@ import chromeHistory from '../utils/chromeHistory';
 import { ReduxState } from '../redux/store';
 import { STORE_INITIAL_HASH } from '../redux/action-types';
 import { FlagTagsFilter } from '../@types/types';
-import useBundle, { getUrl } from '../hooks/useBundle';
+import useBundle, { bundleMapping, getUrl } from '../hooks/useBundle';
 import { warnDuplicatePkg } from './warnDuplicatePackages';
 import { getVisibilityFunctions } from '../utils/VisibilitySingleton';
 import { ChromeAuthContextValue } from '../auth/ChromeAuthContext';
@@ -132,6 +132,7 @@ export const createChromeContext = ({
       }
       return environment;
     },
+    getAvailableBundles: () => Object.entries(bundleMapping).map(([key, value]) => ({ id: key, title: value })),
     createCase: (fields?: any) => chromeAuth.getUser().then((user) => createSupportCase(user!.identity, chromeAuth.token, fields)),
     getUserPermissions: async (app = '', bypassCache?: boolean) => {
       const token = await chromeAuth.getToken();

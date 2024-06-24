@@ -3,10 +3,10 @@ import { act, renderHook } from '@testing-library/react';
 import helpTopicDataMock from './helpTopicDataMock';
 import useHelpTopicState from './useHelpTopicState';
 
-import instance from '@redhat-cloud-services/frontend-components-utilities/interceptors';
+import instance from '@ausuliv/frontend-components-utilities/interceptors';
 
-jest.mock('@redhat-cloud-services/frontend-components-utilities/interceptors', () => {
-  const instance = jest.requireActual('@redhat-cloud-services/frontend-components-utilities/interceptors');
+jest.mock('@ausuliv/frontend-components-utilities/interceptors', () => {
+  const instance = jest.requireActual('@ausuliv/frontend-components-utilities/interceptors');
   return {
     __esModule: true,
     ...instance,

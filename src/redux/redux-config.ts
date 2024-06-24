@@ -1,7 +1,7 @@
 import * as actionTemplates from './actions';
 import chromeReducer, { chromeInitialState } from '.';
-import ReducerRegistry, { dispatchActionsToStore } from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
-import MiddlewareListener from '@redhat-cloud-services/frontend-components-utilities/MiddlewareListener';
+import ReducerRegistry, { dispatchActionsToStore } from '@ausuliv/frontend-components-utilities/ReducerRegistry';
+import MiddlewareListener from '@ausuliv/frontend-components-utilities/MiddlewareListener';
 import logger from 'redux-logger';
 import promise from 'redux-promise-middleware';
 import { ReduxState } from './store';

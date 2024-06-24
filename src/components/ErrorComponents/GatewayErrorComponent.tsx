@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NotAuthorized from '@redhat-cloud-services/frontend-components/NotAuthorized';
+import NotAuthorized from '@ausuliv/frontend-components/NotAuthorized';
 import { useSelector } from 'react-redux';
 import sanitizeHtml from 'sanitize-html';
 
@@ -54,7 +54,7 @@ const GatewayErrorComponent = ({ error }: GatewayErrorComponentProps) => {
   const activeProduct = useSelector((state: ReduxState) => state.chrome.activeProduct);
   // get active product, fallback to module name if product is not defined
   const serviceName = activeProduct || activeModule;
-  return <NotAuthorized description={<Description complianceError={error.complianceError} detail={error.detail} />} serviceName={serviceName} />;
+  return <NotAuthorized bodyText={<Description complianceError={error.complianceError} detail={error.detail} />} serviceName={serviceName} />;
 };
 
 export default GatewayErrorComponent;

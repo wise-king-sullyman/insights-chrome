@@ -1,14 +1,14 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { TagModal } from '@redhat-cloud-services/frontend-components/TagModal';
+import { TagModal } from '@ausuliv/frontend-components/TagModal';
 import { fetchAllSIDs, fetchAllTags } from '../../redux/actions';
 import debounce from 'lodash/debounce';
 import flatMap from 'lodash/flatMap';
 import { useIntl } from 'react-intl';
 import { TagFilterOptions, TagPagination } from './tagsApi';
 import { Action } from 'redux';
-import { TableWithFilterPagination } from '@redhat-cloud-services/frontend-components/TagModal/TableWithFilter';
-import { OnSelectRow, OnUpdateData } from '@redhat-cloud-services/frontend-components/TagModal/TagModal';
+import { TableWithFilterPagination } from '@ausuliv/frontend-components/TagModal/TableWithFilter';
+import { OnSelectRow, OnUpdateData } from '@ausuliv/frontend-components/TagModal/TagModal';
 import messages from '../../locales/Messages';
 import { CommonSelectedTag, CommonTag, GlobalFilterTag, ReduxState, SID } from '../../redux/store';
 import { FlagTagsFilter } from '../../@types/types';

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Bullseye } from '@patternfly/react-core/dist/dynamic/layouts/Bullseye';
-import { Icon } from '@patternfly/react-core';
+import { Icon, InputGroup, InputGroupItem, SearchInput } from '@patternfly/react-core';
 import { Spinner } from '@patternfly/react-core';
-import { Text, TextContent } from '@patternfly/react-core';
-
-import { ContextSelector, ContextSelectorItem } from '@patternfly/react-core/deprecated';
-
+import { Dropdown, DropdownItem, MenuSearch, MenuSearchInput, MenuToggle, Text, TextContent } from '@patternfly/react-core';
 import CheckIcon from '@patternfly/react-icons/dist/dynamic/icons/check-icon';
 import classNames from 'classnames';
 import axios from 'axios';
@@ -137,22 +134,36 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
 
   const filteredData = data && data.filter(({ target_account }) => `${target_account}`.includes(searchValue));
 
+  const contextSwitcherToggle = (toggleRef: React.RefObject<any>) => (
+    <MenuToggle ref={toggleRef} isExpanded={isOpen} onClick={onSelect} aria-label="Selected account:">
+      Account: {selectedAccountNumber}
+    </MenuToggle>
+  );
+
   return (
-    <ContextSelector
-      toggleText={`Account: ${selectedAccountNumber}`}
+    <Dropdown
+      toggle={contextSwitcherToggle}
       className={classNames('chr-c-context-selector', className)}
-      onSearchInputChange={(_event, val) => setSearchValue(val)}
       isOpen={isOpen}
-      searchInputValue={searchValue}
-      onToggle={onSelect}
       onSelect={onSelect}
-      screenReaderLabel="Selected account:`"
       ouiaId="Account Switcher"
-      searchInputPlaceholder={intl.formatMessage(messages.searchAccount)}
-      isFullHeight
+      maxMenuHeight="100%"
     >
+      <MenuSearch>
+        <MenuSearchInput>
+          <InputGroup>
+            <InputGroupItem isFill>
+              <SearchInput
+                onChange={(_event, val) => setSearchValue(val)}
+                value={searchValue}
+                placeholder={intl.formatMessage(messages.searchAccount)}
+              />
+            </InputGroupItem>
+          </InputGroup>
+        </MenuSearchInput>
+      </MenuSearch>
       {user && user?.identity?.account_number?.includes(searchValue) ? (
-        <ContextSelectorItem onClick={resetAccountRequest}>
+        <DropdownItem onClick={resetAccountRequest}>
           <TextContent className="chr-c-content-account">
             <Text className="account-label pf-v6-u-mb-0 sentry-mask data-hj-suppress">
               <span>{user?.identity?.account_number}</span>
@@ -166,14 +177,14 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
               {intl.formatMessage(messages.personalAccount)}
             </Text>
           </TextContent>
-        </ContextSelectorItem>
+        </DropdownItem>
       ) : (
         <Fragment />
       )}
-      {filteredData?.length === 0 ? <ContextSelectorItem>{intl.formatMessage(messages.noResults)}</ContextSelectorItem> : <Fragment />}
+      {filteredData?.length === 0 ? <DropdownItem>{intl.formatMessage(messages.noResults)}</DropdownItem> : <Fragment />}
       {filteredData ? (
         filteredData.map(({ target_account, request_id, end_date, target_org, email, first_name, last_name }) => (
-          <ContextSelectorItem onClick={() => handleItemClick(target_account, request_id, end_date, target_org)} key={request_id}>
+          <DropdownItem onClick={() => handleItemClick(target_account, request_id, end_date, target_org)} key={request_id}>
             <TextContent className="chr-c-content-account">
               <Text className="account-label">
                 <span>{target_account}</span>
@@ -187,16 +198,16 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
                 {first_name && last_name ? `${first_name} ${last_name}` : email}
               </Text>
             </TextContent>
-          </ContextSelectorItem>
+          </DropdownItem>
         ))
       ) : (
-        <ContextSelectorItem>
+        <DropdownItem>
           <Bullseye>
             <Spinner size="md" />
           </Bullseye>
-        </ContextSelectorItem>
+        </DropdownItem>
       )}
-    </ContextSelector>
+    </Dropdown>
   );
 };
 

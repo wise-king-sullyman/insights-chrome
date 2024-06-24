@@ -15,7 +15,7 @@ We supply a native feedback form for the customers to submit, however, some appl
 In order to do this, we disable to form functionality, but keep the button so that pendo can target the element on the page. Chrome supplies a hook that allows team to disable the native form's functionality which you can use through the frontend components.
 
 ```js
-import usePendoFeedback from '@redhat-cloud-services/frontend-components/usePendoFeedback';
+import usePendoFeedback from '@ausuliv/frontend-components/usePendoFeedback';
 
 const AppEntryPoint = () => {
   usePendoFeedback()
@@ -29,7 +29,7 @@ const AppEntryPoint = () => {
 To open feedback form programmatically, we supply a toggle function through `useChrome` hook.
 
 ```js
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 
 const Component = () => {
   const { toggleFeedbackModal } = useChrome()
