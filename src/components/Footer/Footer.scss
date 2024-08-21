@@ -1,9 +1,9 @@
 .chr-c-footer {
   .pf-v6-c-icon {
-    --pf-v6-c-icon__content--Color: var(--pf-v6-global--palette--black-500);
+    --pf-v6-c-icon__content--Color: grey;
     --pf-v6-c-icon__content--FontSize: 2.5em;
     &:hover {
-      --pf-v6-c-icon__content--Color: var(--pf-v6-global--palette--black-400);
+      --pf-v6-c-icon__content--Color: black;
     }
   }
   .pf-v6-c-content {
