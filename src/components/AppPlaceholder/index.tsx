@@ -1,4 +1,4 @@
-import { Masthead, MastheadBrand, MastheadMain } from '@patternfly/react-core';
+import { Masthead, MastheadLogo, MastheadMain, MastheadBrand } from '@patternfly/react-core';
 import { Page, PageSidebar, PageSidebarBody } from '@patternfly/react-core';
 
 import React from 'react';
@@ -16,12 +16,12 @@ const AppPlaceholder = (props: FooterProps) => {
     <MemoryRouter>
       <Page
         className="chr-c-page"
-        header={
+        masthead={
           <Masthead className="chr-c-masthead">
             <MastheadMain className="pf-v6-u-pl-lg">
-              <MastheadBrand component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
+              <MastheadBrand data-codemods><MastheadLogo data-codemods component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
                 <Logo />
-              </MastheadBrand>
+              </MastheadLogo></MastheadBrand>
             </MastheadMain>
           </Masthead>
         }

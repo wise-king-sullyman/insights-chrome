@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button } from '@patternfly/react-core';
-import { Modal, ModalVariant } from '@patternfly/react-core';
-import { TextContent } from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
+import { Content } from '@patternfly/react-core';
 import { BugIcon } from '@patternfly/react-icons/dist/dynamic/icons/bug-icon';
 import { ChromeUser } from '@redhat-cloud-services/types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -59,9 +62,9 @@ const DebuggerModal = ({ user }: DebuggerModalProps) => {
         onClose={() => setIsModalOpen(false)}
       >
         <div className="chr-c-debugger-content">
-          <TextContent>
+          <Content>
             <h1>Chrome Debugger</h1>
-          </TextContent>
+          </Content>
           <Select
             id="single-select"
             ref={menuRef}

@@ -5,10 +5,10 @@ import { Button } from '@patternfly/react-core';
 import { EmptyState, EmptyStateActions, EmptyStateBody } from '@patternfly/react-core';
 import { ExpandableSection } from '@patternfly/react-core';
 import { Flex, FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex';
-import { Text, TextContent } from '@patternfly/react-core';
+import { Content,  } from '@patternfly/react-core';
 import { Title } from '@patternfly/react-core';
 
-import ExclamationCircleIcon from '@patternfly/react-icons/dist/dynamic/icons/exclamation-circle-icon';
+
 import { chunkLoadErrorRefreshKey } from '../../utils/common';
 import { useIntl } from 'react-intl';
 import messages from '../../locales/Messages';
@@ -97,21 +97,21 @@ const DefaultErrorComponent = (props: DefaultErrorComponentProps) => {
           <Flex alignContent={{ default: 'alignContentCenter' }} direction={{ default: 'column' }}>
             <FlexItem>
               <ExpandableSection toggleTextExpanded="Show less" toggleTextCollapsed="Show more">
-                <TextContent>
-                  {typeof props?.error === 'string' && <Text className="error-text">{props.error}</Text>}
+                <Content>
+                  {typeof props?.error === 'string' && <Content component="p" className="error-text">{props.error}</Content>}
                   {typeof props?.error === 'object' && typeof props?.error?.message === 'string' && (
-                    <Text className="error-text">{props.error.message}</Text>
+                    <Content component="p" className="error-text">{props.error.message}</Content>
                   )}
                   {typeof stack === 'string' && (
-                    <Text className="error-text" component="pre">
+                    <Content className="error-text" component="pre">
                       {stack.split('\n').map((content, index) => (
                         <div className="error-line" key={index}>
                           {content}
                         </div>
                       ))}
-                    </Text>
+                    </Content>
                   )}
-                </TextContent>
+                </Content>
               </ExpandableSection>
             </FlexItem>
           </Flex>

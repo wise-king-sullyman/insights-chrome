@@ -43,16 +43,14 @@ export const switchRelease = (isBeta: boolean, pathname: string, previewEnabled:
 };
 
 const InternalButton = () => (
-  <Button
+  <Button icon={<RedhatIcon />}
     variant="plain"
     aria-label="Go to internal tools"
     widget-type="InternalButton"
     className="chr-c-toolbar__button-internal"
     href={`${document.baseURI}internal`}
     component="a"
-  >
-    <RedhatIcon />
-  </Button>
+  ></Button>
 );
 
 type SettingsButtonProps = {
@@ -265,7 +263,7 @@ const Tools = () => {
       <Switch
         id="reversed-switch"
         label="Preview on"
-        labelOff="Preview off"
+        
         aria-label="Preview switcher"
         isChecked={isBeta()}
         onChange={() => (window.location.href = switchRelease(isBeta(), location.pathname, previewEnabled))}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { EmptyState, EmptyStateBody } from '@patternfly/react-core';
-import { Text, TextContent } from '@patternfly/react-core';
+import { Content,  } from '@patternfly/react-core';
 import { Title } from '@patternfly/react-core';
 
 import SearchIcon from '@patternfly/react-icons/dist/dynamic/icons/search-icon';
@@ -15,9 +15,9 @@ const EmptySearchState = () => {
   return (
     <EmptyState className="chr-c-search__empty-state" variant="xs" titleText={title} icon={SearchIcon}>
       <EmptyStateBody>
-        <TextContent>
-          <Text>No results match your criteria. Clear the search field and try again.</Text>
-        </TextContent>
+        <Content>
+          <Content component="p">No results match your criteria. Clear the search field and try again.</Content>
+        </Content>
       </EmptyStateBody>
     </EmptyState>
   );

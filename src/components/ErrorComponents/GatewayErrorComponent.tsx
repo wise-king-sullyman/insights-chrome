@@ -5,7 +5,7 @@ import sanitizeHtml from 'sanitize-html';
 
 import type { ReduxState } from '../../redux/store';
 import ChromeLink from '../ChromeLink/ChromeLink';
-import { Text, TextContent } from '@patternfly/react-core';
+import { Content,  } from '@patternfly/react-core';
 import { useIntl } from 'react-intl';
 import Messages from '../../locales/Messages';
 import { ThreeScaleError } from '../../utils/responseInterceptors';
@@ -36,16 +36,16 @@ const Description = ({ detail, complianceError }: DescriptionProps) => {
     message: detail || '',
   });
   return (
-    <TextContent>
+    <Content>
       {detail && complianceError ? (
-        <Text dangerouslySetInnerHTML={{ __html: sanitizeHtml(detail) }}></Text>
+        <Content component="p" dangerouslySetInnerHTML={{ __html: sanitizeHtml(detail) }}></Content>
       ) : (
         <Fragment>
-          <Text>{description}</Text>
-          {detail && <Text>{errorDetail}</Text>}
+          <Content component="p">{description}</Content>
+          {detail && <Content component="p">{errorDetail}</Content>}
         </Fragment>
       )}
-    </TextContent>
+    </Content>
   );
 };
 

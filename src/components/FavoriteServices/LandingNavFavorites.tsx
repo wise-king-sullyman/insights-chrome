@@ -3,7 +3,7 @@ import { Flex, FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex
 import { Gallery, GalleryItem } from '@patternfly/react-core/dist/dynamic/layouts/Gallery';
 import { Icon } from '@patternfly/react-core';
 import { Pagination } from '@patternfly/react-core';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core';
+import { Content, ContentVariants } from '@patternfly/react-core';
 import { StarIcon } from '@patternfly/react-icons/dist/dynamic/icons/star-icon';
 import React, { useState } from 'react';
 import useFavoritedServices from '../../hooks/useFavoritedServices';
@@ -47,17 +47,17 @@ const LandingNavFavorites = () => {
     <React.Fragment>
       <Flex>
         <FlexItem>
-          <TextContent>
-            <Text component={TextVariants.h2} className="pf-v6-u-display-inline pf-v6-u-pr-lg">
+          <Content>
+            <Content component={ContentVariants.h2} className="pf-v6-u-display-inline pf-v6-u-pr-lg">
               <Icon className="pf-v6-u-mr-sm" status="warning">
                 <StarIcon />
               </Icon>
               My favorite services
-            </Text>
-            <Text component={TextVariants.p} className="pf-v6-u-display-inline">
+            </Content>
+            <Content component={ContentVariants.p} className="pf-v6-u-display-inline">
               <Link to="/allservices">View all services</Link>
-            </Text>
-          </TextContent>
+            </Content>
+          </Content>
         </FlexItem>
         <FlexItem align={{ default: 'alignRight' }}>
           <Pagination

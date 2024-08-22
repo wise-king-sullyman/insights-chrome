@@ -4,8 +4,11 @@ import { Card, CardBody, CardTitle } from '@patternfly/react-core';
 import { FlexItem } from '@patternfly/react-core/dist/dynamic/layouts/Flex';
 import { Grid, GridItem } from '@patternfly/react-core/dist/dynamic/layouts/Grid';
 import { Label } from '@patternfly/react-core';
-import { Modal, ModalVariant } from '@patternfly/react-core';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
+import { Content, ContentVariants } from '@patternfly/react-core';
 
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
 import OutlinedCommentsIcon from '@patternfly/react-icons/dist/dynamic/icons/outlined-comments-icon';
@@ -63,10 +66,10 @@ const FeedbackModal = memo(() => {
         return (
           <div className="chr-c-feedback-content">
             <FlexItem className="pf-v6-u-flex-grow-1">
-              <TextContent className="pf-v6-u-mb-md">
-                <Text component={TextVariants.h1}>{intl.formatMessage(messages.tellAboutExperience)}</Text>
-                <Text>{intl.formatMessage(messages.helpUsImproveHCC)}</Text>
-              </TextContent>
+              <Content className="pf-v6-u-mb-md">
+                <Content component={ContentVariants.h1}>{intl.formatMessage(messages.tellAboutExperience)}</Content>
+                <Content component="p">{intl.formatMessage(messages.helpUsImproveHCC)}</Content>
+              </Content>
               <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => setModalPage('feedbackOne')}>
                 <CardTitle className="pf-v6-u-primary-color-100">{intl.formatMessage(messages.shareFeedback)}</CardTitle>
                 <CardBody>{intl.formatMessage(messages.howIsConsoleExperience)}</CardBody>
@@ -77,15 +80,15 @@ const FeedbackModal = memo(() => {
               </Card>
               <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => createSupportCase(user.identity, chromeAuth.token)}>
                 <CardTitle className="pf-v6-u-primary-color-100">
-                  <Text>
+                  <Content component="p">
                     {intl.formatMessage(messages.openSupportCase)} <ExternalLinkAltIcon />
-                  </Text>
+                  </Content>
                 </CardTitle>
                 <CardBody>{intl.formatMessage(messages.getSupport)}</CardBody>
               </Card>
               <Card className="pf-v6-u-mb-lg"  isCompact onClick={() => setModalPage('informDirection')}>
                 <CardTitle className="pf-v6-u-primary-color-100">
-                  <Text>{intl.formatMessage(messages.informRedhatDirection)}</Text>
+                  <Content component="p">{intl.formatMessage(messages.informRedhatDirection)}</Content>
                 </CardTitle>
                 <CardBody>{intl.formatMessage(messages.learnAboutResearchOpportunities)}</CardBody>
               </Card>
@@ -122,16 +125,16 @@ const FeedbackModal = memo(() => {
             handleFeedbackError={() => setModalPage('feedbackError')}
             modalTitle={intl.formatMessage(messages.reportABug)}
             modalDescription={
-              <Text>
+              <Content component="p">
                 {intl.formatMessage(messages.describeReportBug)}{' '}
-                <Text
+                <Content
                   component="a"
                   href="https://access.redhat.com/support/cases/#/case/new/get-support?caseCreate=true&source=console"
                   target="_blank"
                 >
                   {intl.formatMessage(messages.openSupportCase)} <ExternalLinkAltIcon />
-                </Text>
-              </Text>
+                </Content>
+              </Content>
             }
             feedbackType="Bug"
             checkboxDescription={`${intl.formatMessage(messages.learnAboutResearchOpportunities)} ${intl.formatMessage(
@@ -150,13 +153,13 @@ const FeedbackModal = memo(() => {
             handleFeedbackError={() => setModalPage('feedbackError')}
             modalTitle={intl.formatMessage(messages.informRedhatDirection)}
             modalDescription={
-              <Text>
+              <Content component="p">
                 {intl.formatMessage(messages.informDirectionDescription)}&nbsp;
-                <Text component="a" href="https://www.redhat.com/en/about/user-research" target="_blank">
+                <Content component="a" href="https://www.redhat.com/en/about/user-research" target="_blank">
                   {intl.formatMessage(messages.userResearchTeam)}
-                </Text>
+                </Content>
                 {intl.formatMessage(messages.directInfluence)}
-              </Text>
+              </Content>
             }
             feedbackType="[Research Opportunities]"
             textAreaHidden={true}

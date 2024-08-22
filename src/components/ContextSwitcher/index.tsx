@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Bullseye } from '@patternfly/react-core/dist/dynamic/layouts/Bullseye';
 import { Icon, InputGroup, InputGroupItem, SearchInput } from '@patternfly/react-core';
 import { Spinner } from '@patternfly/react-core';
-import { Dropdown, DropdownItem, MenuSearch, MenuSearchInput, MenuToggle, Text, TextContent } from '@patternfly/react-core';
+import { Dropdown, DropdownItem, MenuSearch, MenuSearchInput, MenuToggle, Content,  } from '@patternfly/react-core';
 import CheckIcon from '@patternfly/react-icons/dist/dynamic/icons/check-icon';
 import classNames from 'classnames';
 import axios from 'axios';
@@ -164,19 +164,19 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
       </MenuSearch>
       {user && user?.identity?.account_number?.includes(searchValue) ? (
         <DropdownItem onClick={resetAccountRequest}>
-          <TextContent className="chr-c-content-account">
-            <Text className="account-label pf-v6-u-mb-0 sentry-mask data-hj-suppress">
+          <Content className="chr-c-content-account">
+            <Content component="p" className="account-label pf-v6-u-mb-0 sentry-mask data-hj-suppress">
               <span>{user?.identity?.account_number}</span>
               {user?.identity?.account_number === `${selectedAccountNumber}` && (
                 <Icon size="sm" className="pf-v6-u-ml-auto">
                   <CheckIcon color="var(--pf-v6-global--primary-color--100)" />
                 </Icon>
               )}
-            </Text>
-            <Text className="account-name" component="small">
+            </Content>
+            <Content className="account-name" component="small">
               {intl.formatMessage(messages.personalAccount)}
-            </Text>
-          </TextContent>
+            </Content>
+          </Content>
         </DropdownItem>
       ) : (
         <Fragment />
@@ -185,19 +185,19 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
       {filteredData ? (
         filteredData.map(({ target_account, request_id, end_date, target_org, email, first_name, last_name }) => (
           <DropdownItem onClick={() => handleItemClick(target_account, request_id, end_date, target_org)} key={request_id}>
-            <TextContent className="chr-c-content-account">
-              <Text className="account-label">
+            <Content className="chr-c-content-account">
+              <Content component="p" className="account-label">
                 <span>{target_account}</span>
                 {target_account === selectedAccountNumber && (
                   <Icon size="sm" className="pf-v6-u-ml-auto">
                     <CheckIcon color="var(--pf-v6-global--primary-color--100)" />
                   </Icon>
                 )}
-              </Text>
-              <Text className="account-name" component="small">
+              </Content>
+              <Content className="account-name" component="small">
                 {first_name && last_name ? `${first_name} ${last_name}` : email}
-              </Text>
-            </TextContent>
+              </Content>
+            </Content>
           </DropdownItem>
         ))
       ) : (

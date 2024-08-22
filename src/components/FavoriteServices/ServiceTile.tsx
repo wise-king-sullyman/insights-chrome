@@ -3,7 +3,7 @@ import { Button } from '@patternfly/react-core';
 import { Card, CardBody } from '@patternfly/react-core';
 import { Icon } from '@patternfly/react-core';
 import { Split, SplitItem } from '@patternfly/react-core/dist/dynamic/layouts/Split';
-import { Text, TextContent } from '@patternfly/react-core';
+import { Content,  } from '@patternfly/react-core';
 import StarIcon from '@patternfly/react-icons/dist/dynamic/icons/star-icon';
 
 import ChromeLink from '../ChromeLink';
@@ -31,7 +31,9 @@ const ServiceTile = ({ name, pathname, description, isExternal }: ServiceTilePro
           <Split>
             <SplitItem className="pf-v5-m-fill">{name}</SplitItem>
             <SplitItem>
-              <Button
+              <Button icon={<Icon className="pf-v6-u-ml-sm chr-c-icon-star">
+                  <StarIcon />
+                </Icon>}
                 onClick={(e) => {
                   // do not trigger click events on the the parent elements
                   e.stopPropagation();
@@ -40,21 +42,17 @@ const ServiceTile = ({ name, pathname, description, isExternal }: ServiceTilePro
                 }}
                 className="pf-v6-u-p-0"
                 variant="plain"
-              >
-                <Icon className="pf-v6-u-ml-sm chr-c-icon-star">
-                  <StarIcon />
-                </Icon>
-              </Button>
+              ></Button>
             </SplitItem>
           </Split>
-          <TextContent>
-            <Text component="small">{bundle}</Text>
+          <Content>
+            <Content component="small">{bundle}</Content>
             {description ? (
-              <Text component="small" className="pf-v6-u-color-100">
+              <Content component="small" className="pf-v6-u-color-100">
                 {description}
-              </Text>
+              </Content>
             ) : null}
-          </TextContent>
+          </Content>
         </CardBody>
       </Card>
     </ChromeLink>

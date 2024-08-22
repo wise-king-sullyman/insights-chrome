@@ -7,7 +7,7 @@ import { MenuToggle, MenuToggleElement } from '@patternfly/react-core';
 import { Divider } from '@patternfly/react-core';
 import { EmptyState, EmptyStateBody } from '@patternfly/react-core';
 import { NotificationDrawer, NotificationDrawerBody, NotificationDrawerHeader, NotificationDrawerList } from '@patternfly/react-core';
-import { Text } from '@patternfly/react-core';
+import { Content } from '@patternfly/react-core';
 import { Title } from '@patternfly/react-core';
 import { useDispatch, useSelector } from 'react-redux';
 import FilterIcon from '@patternfly/react-icons/dist/dynamic/icons/filter-icon';
@@ -37,7 +37,7 @@ const EmptyNotifications = ({ isOrgAdmin, onLinkClick }: { onLinkClick: () => vo
     <EmptyState icon={BellSlashIcon} titleText={title}>
       <EmptyStateBody>
         {isOrgAdmin ? (
-          <Text>
+          <Content component="p">
             Try&nbsp;
             <Link onClick={onLinkClick} to="/settings/notifications/user-preferences">
               checking your notification preferences
@@ -47,13 +47,13 @@ const EmptyNotifications = ({ isOrgAdmin, onLinkClick }: { onLinkClick: () => vo
               notification configuration
             </Link>
             &nbsp;for your organization.
-          </Text>
+          </Content>
         ) : (
           <>
             <Link onClick={onLinkClick} to="/settings/notifications/configure-events">
               Configure notification settings
             </Link>
-            .<Text>Contact your organization administrator.</Text>
+            .<Content component="p">Contact your organization administrator.</Content>
           </>
         )}
       </EmptyStateBody>

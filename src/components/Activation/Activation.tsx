@@ -2,8 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ChromeUser } from '@redhat-cloud-services/types';
 import { DeepRequired } from 'utility-types';
 import { useNavigate } from 'react-router-dom';
-import { Modal, ModalVariant } from '@patternfly/react-core';
-import { Text, TextContent } from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
+import { Content,  } from '@patternfly/react-core';
 import { getEnv } from '../../utils/common';
 import { useIntl } from 'react-intl';
 import messages from '../../locales/Messages';
@@ -51,9 +54,9 @@ const Activation = ({ user, request }: { user: DeepRequired<ChromeUser>; request
 
   return (
     <Modal isOpen={isModalOpen} onClose={onModalClose} title={intl.formatMessage(messages.activationTitle)} variant={ModalVariant.medium}>
-      <TextContent>
-        <Text>{intl.formatMessage(messages.activationDescription)}</Text>
-      </TextContent>
+      <Content>
+        <Content component="p">{intl.formatMessage(messages.activationDescription)}</Content>
+      </Content>
     </Modal>
   );
 };

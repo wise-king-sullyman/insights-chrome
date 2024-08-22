@@ -38,13 +38,13 @@ const SatelliteToken: React.FC = () => {
       <Page
         className="chr-c-all-services"
         onPageResize={null} // required to disable PF resize observer that causes re-rendring issue
-        header={
+        masthead={
           <Masthead className="chr-c-masthead">
             <Header />
           </Masthead>
         }
       >
-        <PageSection padding={{ default: 'noPadding', md: 'padding', lg: 'padding' }}>
+        <PageSection hasBodyWrapper={false} padding={{ default: 'noPadding', md: 'padding', lg: 'padding' }}>
           <Card>
             <CardTitle>Your Registration Token</CardTitle>
             <CardBody>
@@ -79,7 +79,7 @@ const SatelliteToken: React.FC = () => {
             </CardBody>
           </Card>
         </PageSection>
-        <PageSection>
+        <PageSection hasBodyWrapper={false}>
           <Card>
             <CardTitle>Registrations</CardTitle>
             <CardBody>

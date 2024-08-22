@@ -3,7 +3,7 @@ import { Button } from '@patternfly/react-core';
 import { Card, CardBody } from '@patternfly/react-core';
 import { Icon } from '@patternfly/react-core';
 import { Split, SplitItem } from '@patternfly/react-core/dist/dynamic/layouts/Split';
-import { Text, TextContent } from '@patternfly/react-core';
+import { Content,  } from '@patternfly/react-core';
 
 import StarIcon from '@patternfly/react-icons/dist/dynamic/icons/star-icon';
 import ExternalLinkAltIcon from '@patternfly/react-icons/dist/dynamic/icons/external-link-alt-icon';
@@ -82,9 +82,9 @@ const AllServicesGalleryLink = ({ href, title, icon, description, isExternal, ca
               )}
             </SplitItem>
           </Split>
-          <TextContent>
-            <Text className="pf-v6-u-font-size-xs pf-v6-u-color-100">{description ?? ''}</Text>
-          </TextContent>
+          <Content>
+            <Content component="p" className="pf-v6-u-font-size-xs pf-v6-u-color-100">{description ?? ''}</Content>
+          </Content>
         </CardBody>
       </Card>
     </ChromeLink>

@@ -1,5 +1,8 @@
 import { Button } from '@patternfly/react-core';
-import { Modal, ModalVariant } from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
 import { Title } from '@patternfly/react-core';
 import { Stack, StackItem } from '@patternfly/react-core/dist/dynamic/layouts/Stack';
 import React from 'react';

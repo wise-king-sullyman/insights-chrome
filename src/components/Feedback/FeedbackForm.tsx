@@ -3,7 +3,7 @@ import { Button } from '@patternfly/react-core';
 import { Checkbox } from '@patternfly/react-core';
 import { Form, FormGroup } from '@patternfly/react-core';
 import { Panel, PanelMain, PanelMainBody } from '@patternfly/react-core';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core';
+import { Content, ContentVariants } from '@patternfly/react-core';
 import { TextArea } from '@patternfly/react-core';
 
 import { DeepRequired } from 'utility-types';
@@ -89,10 +89,10 @@ const FeedbackForm = ({
 
   return (
     <div className="chr-c-feedback-content">
-      <TextContent>
-        <Text component={TextVariants.h1}>{modalTitle}</Text>
+      <Content>
+        <Content component={ContentVariants.h1}>{modalTitle}</Content>
         {modalDescription}
-      </TextContent>
+      </Content>
       <Form>
         {textAreaHidden ? (
           ''

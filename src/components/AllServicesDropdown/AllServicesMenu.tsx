@@ -6,7 +6,7 @@ import { Stack, StackItem } from '@patternfly/react-core/dist/dynamic/layouts/St
 import { Panel, PanelMain } from '@patternfly/react-core';
 import { Sidebar, SidebarContent, SidebarPanel } from '@patternfly/react-core';
 import { TabContent } from '@patternfly/react-core';
-import { Text, TextContent, TextVariants } from '@patternfly/react-core';
+import { Content, ContentVariants } from '@patternfly/react-core';
 import { Title } from '@patternfly/react-core';
 
 import ChromeLink from '../ChromeLink';
@@ -82,13 +82,13 @@ const AllServicesMenu = ({ setIsOpen, isOpen, menuRef, linkSections, favoritedSe
                 <SidebarPanel>
                   <Stack>
                     <StackItem className="chr-l-stack__item-browse-all-services pf-v6-u-w-100 pf-v6-u-p-md">
-                      <TextContent className="pf-v6-u-text-align-center-on-md pf-v6-u-pl-sm pf-v6-u-pl-0-on-md">
-                        <Text component={TextVariants.p}>
+                      <Content className="pf-v6-u-text-align-center-on-md pf-v6-u-pl-sm pf-v6-u-pl-0-on-md">
+                        <Content component={ContentVariants.p}>
                           <ChromeLink href="/allservices">
                             <Button isBlock>All services</Button>
                           </ChromeLink>
-                        </Text>
-                      </TextContent>
+                        </Content>
+                      </Content>
                     </StackItem>
                     <StackItem className="pf-v6-u-w-100">
                       <AllServicesTabs
@@ -109,9 +109,7 @@ const AllServicesMenu = ({ setIsOpen, isOpen, menuRef, linkSections, favoritedSe
                     <CardHeader
                       actions={{
                         actions: [
-                          <Button key="close" variant="plain" aria-label="Close menu" onClick={() => setIsOpen(!isOpen)}>
-                            <TimesIcon />
-                          </Button>,
+                          <Button icon={<TimesIcon />} key="close" variant="plain" aria-label="Close menu" onClick={() => setIsOpen(!isOpen)}></Button>,
                         ],
                       }}
                       className="pf-v6-u-pr-xs pf-v6-u-pr-md-on-md"
