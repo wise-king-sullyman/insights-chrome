@@ -19,9 +19,11 @@ const AppPlaceholder = (props: FooterProps) => {
         masthead={
           <Masthead className="chr-c-masthead">
             <MastheadMain className="pf-v6-u-pl-lg">
-              <MastheadBrand data-codemods><MastheadLogo data-codemods component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
-                <Logo />
-              </MastheadLogo></MastheadBrand>
+              <MastheadBrand data-codemods>
+                <MastheadLogo data-codemods component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
+                  <Logo />
+                </MastheadLogo>
+              </MastheadBrand>
             </MastheadMain>
           </Masthead>
         }

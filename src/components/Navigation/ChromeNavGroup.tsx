@@ -13,12 +13,14 @@ const ChromeNavGroup = ({ navItems, isHidden, icon, title }: ChromeNavGroupProps
   }
 
   const groupTitle = (
-    <div>
-      <Icon size="sm" className="pf-v6-u-mr-sm" isInline>
-        {icon && sectionTitleMapper[icon]}
-      </Icon>
+    <>
+      {icon && (
+        <Icon size="sm" className="pf-v6-u-mr-sm" isInline>
+          {sectionTitleMapper[icon]}
+        </Icon>
+      )}
       {title}
-    </div>
+    </>
   );
   return (
     // PF does not allow node/element in the NavGroup prop types, hence the type cast

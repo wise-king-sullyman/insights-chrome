@@ -47,7 +47,7 @@ const InternalButton = () => (
     variant="plain"
     aria-label="Go to internal tools"
     widget-type="InternalButton"
-    className="chr-c-toolbar__button-internal"
+    className="chr-c-toolbar__button-internal pf-v6-u-align-content-center"
     href={`${document.baseURI}internal`}
     component="a"
   ></Button>
@@ -268,7 +268,7 @@ const Tools = () => {
         isChecked={isBeta()}
         onChange={() => (window.location.href = switchRelease(isBeta(), location.pathname, previewEnabled))}
         isReversed
-        className="chr-c-beta-switcher"
+        // className="chr-c-beta-switcher"
       />
     );
   };
@@ -293,7 +293,7 @@ const Tools = () => {
   return (
     <>
       <ToolbarItem
-        className="pf-v6-u-mr-0"
+        className="pf-v6-u-mr-0 pf-v6-u-align-items-center"
         {...(isNotificationsEnabled && {
           spacer: {
             default: 'spacerMd',

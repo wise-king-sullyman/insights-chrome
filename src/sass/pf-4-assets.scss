@@ -1,5 +1,9 @@
 $pf-global--enable-reset: 'true';
 
+body {
+    font-family: var(--pf-t--global--font-family--body);
+}
+
 @import '~pf-4-styles/patternfly.scss';
 @import '~pf-4-styles/patternfly-addons.scss';
 @import '~pf-4-styles/utilities/Accessibility/accessibility.scss';

@@ -36,15 +36,15 @@
        }
      .pf-v6-c-icon {
        --pf-v6-c-icon__content--Color: var(--pf-v6-global--Color--light-100);
-       margin-right: var(--pf-v6-global--spacer--sm);
+       margin-right: var(--pf-t--global--spacer--sm);
      }
    }
 
 
   .chr-c-beta-switcher {
-    --pf-v6-c-switch--FontSize: var(--pf-v6-global--FontSize--sm);
+    --pf-v6-c-switch--FontSize: var(--pf-t--global--font--size--body--default);
     .pf-v6-c-switch__label {
-      color: var(--pf-v6-global--palette--black-400) !important;
+      color: var(--pf-t--global--text--color--regular) !important;
       padding-right: 0;
     }
   }
@@ -57,7 +57,7 @@
     font-size: var(--pf-v6-global--FontSize--xs);
   }
   .chr-c-dropdown-item__stack--subValue { 
-    padding-top: var(--pf-v6-global--spacer--xs);
+    padding-top: var(--pf-t--global--spacer--xs);
   }
   .chr-c-dropdown-user-toggle {
     --pf-v6-c-dropdown__menu--Top: 100%;

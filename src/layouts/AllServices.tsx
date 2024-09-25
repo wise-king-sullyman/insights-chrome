@@ -42,7 +42,7 @@ const AllServices = ({ Footer }: AllServicesProps) => {
         className="chr-c-all-services"
         onPageResize={null} // required to disable PF resize observer that causes re-rendring issue
         masthead={
-          <Masthead className="chr-c-masthead pf-v6-u-p-0" display={{ sm: 'stack', '2xl': 'inline' }}>
+          <Masthead className="chr-c-masthead" display={{ sm: 'stack', '2xl': 'inline' }}>
             <Header />
           </Masthead>
         }

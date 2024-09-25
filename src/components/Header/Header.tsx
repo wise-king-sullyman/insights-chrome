@@ -2,8 +2,9 @@ import React, { Fragment, useContext, useState } from 'react';
 import ReactDOM from 'react-dom';
 import Tools from './Tools';
 import UnAuthtedHeader from './UnAuthtedHeader';
-import { MastheadLogo, MastheadContent, MastheadMain, MastheadBrand } from '@patternfly/react-core';
+import { MastheadLogo, MastheadContent, MastheadMain, MastheadBrand, MastheadToggle } from '@patternfly/react-core';
 import { Toolbar, ToolbarContent, ToolbarGroup, ToolbarItem } from '@patternfly/react-core';
+import MastheadMenuToggle from '../Header/MastheadMenuToggle';
 import SatelliteLink from './SatelliteLink';
 import ContextSwitcher from '../ContextSwitcher';
 import Feedback from '../Feedback';
@@ -49,12 +50,25 @@ export const Header = ({ breadcrumbsProps }: { breadcrumbsProps?: Breadcrumbspro
     setSearchOpen(isOpen);
   };
 
+  const { hideNav, isNavOpen, setIsNavOpen } = breadcrumbsProps as Breadcrumbsprops;
+
   return (
     <Fragment>
-      <MastheadMain className="pf-v6-u-pl-lg pf-v6-u-pt-0 pf-v6-u-pb-xs">
-        <MastheadBrand data-codemods><MastheadLogo data-codemods className="pf-v6-u-flex-shrink-0 pf-v6-u-mr-lg" component={(props) => <ChromeLink {...props} appId="landing" href="/" />}>
-          <Logo />
-        </MastheadLogo></MastheadBrand>
+      <MastheadMain className="pf-v6-u-pt-0 pf-v6-u-pb-xs">
+        {!hideNav && (
+          <MastheadToggle>
+            <MastheadMenuToggle setIsNavOpen={setIsNavOpen} isNavOpen={isNavOpen} />
+          </MastheadToggle>
+        )}
+        <MastheadBrand data-codemods>
+          <MastheadLogo
+            data-codemods
+            className="pf-v6-u-flex-shrink-0 pf-v6-u-mr-lg"
+            component={(props) => <ChromeLink {...props} appId="landing" href="/" />}
+          >
+            <Logo />
+          </MastheadLogo>
+        </MastheadBrand>
         <Toolbar isFullHeight>
           <ToolbarContent>
             <ToolbarGroup className="pf-v5-m-icon-button-group pf-v6-u-ml-auto" widget-type="InsightsToolbar" visibility={{ '2xl': 'hidden' }}>
@@ -88,6 +102,8 @@ export const Header = ({ breadcrumbsProps }: { breadcrumbsProps?: Breadcrumbspro
               className="pf-v5-m-icon-button-group pf-v6-u-ml-auto"
               visibility={{ default: 'hidden', '2xl': 'visible' }}
               widget-type="InsightsToolbar"
+              // variant="action-group-plain"
+              gap={{default: "gapNone"}}
             >
               {lg && <HeaderTools />}
             </ToolbarGroup>
