@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Bullseye } from '@patternfly/react-core/dist/dynamic/layouts/Bullseye';
 import { Icon, InputGroup, InputGroupItem, SearchInput } from '@patternfly/react-core';
 import { Spinner } from '@patternfly/react-core';
-import { Dropdown, DropdownItem, MenuSearch, MenuSearchInput, MenuToggle, Content,  } from '@patternfly/react-core';
+import { Content, Dropdown, DropdownItem, MenuSearch, MenuSearchInput, MenuToggle } from '@patternfly/react-core';
 import CheckIcon from '@patternfly/react-icons/dist/dynamic/icons/check-icon';
 import classNames from 'classnames';
 import axios from 'axios';
@@ -169,7 +169,7 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
               <span>{user?.identity?.account_number}</span>
               {user?.identity?.account_number === `${selectedAccountNumber}` && (
                 <Icon size="sm" className="pf-v6-u-ml-auto">
-                  <CheckIcon color="var(--pf-v6-global--primary-color--100)" />
+                  <CheckIcon color="var(--pf-t--global--icon--color--brand--default)" />
                 </Icon>
               )}
             </Content>
@@ -190,7 +190,7 @@ const ContextSwitcher = ({ user, className }: ContextSwitcherProps) => {
                 <span>{target_account}</span>
                 {target_account === selectedAccountNumber && (
                   <Icon size="sm" className="pf-v6-u-ml-auto">
-                    <CheckIcon color="var(--pf-v6-global--primary-color--100)" />
+                    <CheckIcon color="var(--pf-t--global--icon--color--brand--default)" />
                   </Icon>
                 )}
               </Content>

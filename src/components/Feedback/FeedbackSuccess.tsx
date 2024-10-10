@@ -19,8 +19,8 @@ const FeedbackSuccess = ({ onCloseModal, successTitle, successDescription }: Fee
   const intl = useIntl();
   return (
     <div className="chr-c-feedback-success-content">
-      <Icon size="md">
-        <CheckIcon color="var(--pf-v6-global--success-color--100)" className="pf-v6-u-mx-auto" />
+      <Icon size="md" status="success">
+        <CheckIcon className="pf-v6-u-mx-auto" />
       </Icon>
       <Content>
         <Content component={ContentVariants.h1}>{successTitle}</Content>

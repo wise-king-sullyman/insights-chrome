@@ -47,7 +47,7 @@ const InternalButton = () => (
     variant="plain"
     aria-label="Go to internal tools"
     widget-type="InternalButton"
-    className="chr-c-toolbar__button-internal pf-v6-u-align-content-center"
+    className="chr-c-toolbar__button-internal pf-v6-u-align-items-center"
     href={`${document.baseURI}internal`}
     component="a"
   ></Button>

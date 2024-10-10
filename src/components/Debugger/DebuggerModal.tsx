@@ -45,14 +45,14 @@ const DebuggerModal = ({ user }: DebuggerModalProps) => {
 
   return (
     <React.Fragment>
-      <Button
+      <Button icon={<BugIcon />}
         ouiaId="debugger-button"
         className="chr-c-button-debugger"
         onClick={() => {
           setIsModalOpen(true);
         }}
       >
-        <BugIcon />
+        
       </Button>
       <Modal
         aria-label="Debugger modal"

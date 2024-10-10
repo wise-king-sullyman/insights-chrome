@@ -198,7 +198,7 @@ const FeedbackModal = memo(() => {
 
   return (
     <React.Fragment>
-      <Button
+      <Button icon={<OutlinedCommentsIcon />}
         ouiaId="feedback-button"
         className="chr-c-button-feedback"
         onClick={() => {
@@ -208,7 +208,7 @@ const FeedbackModal = memo(() => {
           }
         }}
       >
-        <OutlinedCommentsIcon />
+        
         {intl.formatMessage(messages.feedback)}
       </Button>
       <Modal aria-label="Feedback modal" isOpen={isOpen} className="chr-c-feedback-modal" variant={ModalVariant.large} onClose={handleCloseModal}>
