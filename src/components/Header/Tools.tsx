@@ -323,7 +323,7 @@ const Tools = () => {
         </ToolbarItem>
       )}
       {isInternal && !ITLess() && (
-        <ToolbarItem className="pf-v6-u-mr-0">
+        <ToolbarItem className="pf-v6-u-mr-0 pf-v6-u-align-items-center">
           <Tooltip aria="none" aria-live="polite" content={'Internal'} flipBehavior={['bottom']}>
             <InternalButton />
           </Tooltip>
